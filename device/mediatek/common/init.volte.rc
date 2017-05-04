@@ -1,0 +1,52 @@
+##
+#
+# volte_rcs_ua specific system properties
+#
+on property:ril.volte.stack.rcsuaproxy=1
+		start volte_rcs_ua
+
+on property:ril.volte.stack.rcsuaproxy=0
+		stop volte_rcs_ua
+
+service volte_ua /system/bin/volte_ua
+    class core
+    socket volte_ua stream 660 root system
+    user root
+    group system log inet radio net_admin root
+    oneshot
+    disabled
+
+service volte_stack /system/bin/volte_stack
+    class core
+    socket volte_stack stream 660 root system
+    user root
+    group system log inet radio
+    oneshot
+    disabled
+
+service volte_imcb /system/bin/volte_imcb
+    class core
+    socket volte_imsa1 stream 660 root radio
+    socket volte_imsa2 stream 660 root radio
+    socket volte_imsvt1 stream 660 root radio
+    socket volte_imsvt2 stream 660 root radio
+    socket volte_ut stream 660 root radio
+    user system
+    group system log inet radio
+    oneshot
+    disabled
+
+#
+# volte_rcs_ua specific system service and socket information
+#
+service volte_rcs_ua /system/bin/volte_rcs_ua
+    class core
+    socket rcs_ua_proxy stream 666 root system
+    user system
+    group system log inet radio
+    oneshot
+    disabled
+
+#
+# VoLTE related services (End)
+#

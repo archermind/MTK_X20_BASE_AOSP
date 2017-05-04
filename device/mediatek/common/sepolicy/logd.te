@@ -1,0 +1,7 @@
+# ==============================================
+# MTK Policy Rule
+# ============
+dontaudit logd unlabeled:dir search;
+#allow logd system_data_file:dir { relabelfrom create_dir_perms  };
+allow logd logmuch_data_file:dir { relabelto create_dir_perms   };
+allow logd logmuch_data_file:file create_file_perms;

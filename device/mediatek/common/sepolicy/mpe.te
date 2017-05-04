@@ -1,0 +1,67 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+# Date : WK15.29
+# Operation : Feature Developing
+# Purpose : Sensor Aiding GPS
+type MPED, domain;
+type MPED_exec, exec_type, file_type;
+
+init_daemon_domain(MPED)
+net_domain(MPED)
+
+# Date : WK15.29
+# Operation : Feature Developing
+# Purpose : Setup Connection with GPS
+allow MPED fuse:dir search;
+allow MPED fuse:dir write;
+allow MPED fuse:dir add_name;
+allow MPED fuse:file create;
+allow MPED fuse:file rw_file_perms;
+allow MPED fuse:file create_file_perms;
+allow MPED fuse:dir { read remove_name create open };
+allow MPED init:unix_stream_socket connectto;
+allow MPED init:udp_socket { read write };
+allow MPED mnld_data_file:dir create_dir_perms;
+allow MPED mnld_data_file:sock_file create_file_perms;
+allow MPED mnld:unix_dgram_socket sendto;
+allow MPED self:capability { fsetid dac_override };
+allow MPED property_socket:sock_file rw_file_perms;
+allow MPED system_server:unix_dgram_socket sendto;
+allow MPED system_server:unix_stream_socket { read write };
+allow MPED system_server:binder call;
+allow MPED sysfs:file rw_file_perms;
+allow MPED tmpfs:lnk_file { read create open };
+
+# Date : WK15.30
+# Operation : Feature Developing
+# Purpose : Setup Connection with sensormanager
+binder_use(MPED)
+binder_call(MPED,binderservicedomain)
+allow MPED servicemanager:dir search;
+allow MPED servicemanager:file { read getattr open };
+
+# Create data/mtk_mpe_server as mpe socket
+type_transition MPED system_data_file:sock_file MPED_socket "mtk_mpe_server";
+allow MPED MPED_socket:sock_file { create getattr open read write append ioctl lock link unlink};
+allow MPED system_data_file:dir remove_name;
+allow MPED system_data_file:sock_file {unlink write };
+
+# All others under /data get MPED_data_file
+file_type_auto_trans(MPED, system_data_file, MPED_data_file);
+allow MPED MPED_data_file:dir {write add_name};
+allow MPED MPED_data_file:file create_file_perms;
+
+# Date : WK15.33
+# Operation : Feature Developing
+# Purpose : Add permission for mped socket
+allow MPED MPED_socket:sock_file setattr;
+# Date : WK15.34
+# Operation : Feature Developing
+# Purpose : Add permission for mnld fifo file
+allow MPED mnld_data_file:fifo_file { read write open getattr append };
+
+# Date : WK15.40
+# Operation : Feature Developing
+# Purpose : Add permission for sensorservice access
+allow MPED sensorservice_service:service_manager find;

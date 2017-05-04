@@ -1,0 +1,489 @@
+# ==============================================
+# Policy File of /system/bin/atcp Executable File
+
+
+# ==============================================
+# Type Declaration
+# ==============================================
+
+type atcp_exec , exec_type, file_type;
+type atcp ,domain;
+
+# ==============================================
+# Android Policy Rule
+# ==============================================
+
+# ==============================================
+# NSA Policy Rule
+# ==============================================
+
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+#permissive atcp;
+init_daemon_domain(atcp)
+
+allow atcp devpts:chr_file { open read write ioctl };
+allow atcp devpts:chr_file { getattr setattr };
+allow atcp ttyGS_device:chr_file { open read write ioctl };
+allow atcp proc_lk_env:file { open read write ioctl };
+
+allow atcp atcp_prop:property_service set;
+#allow atcp persist_sys_dongle_usb_prop:property_service set;
+allow atcp system_prop:property_service set;
+allow atcp persist_service_atci_prop:property_service set;
+
+allow atcp volte_imsm_md:unix_stream_socket connectto;
+allow atcp rild_imsm_socket:sock_file write;
+
+allow atcp socket_device:sock_file { create write unlink };
+allow atcp socket_device:dir { create write remove_name add_name };
+allow atcp lannetmngrd:unix_dgram_socket { sendto recvfrom } ;
+allow atcp lannetmngrd_socket:sock_file write;
+
+#
+# Ref. gsm0710muxd.te (Begin)
+#
+allow atcp gsm0710muxd_device:chr_file open;
+allow atcp gsm0710muxd_device:chr_file { read write };
+allow atcp ctl_rildaemon_prop:property_service set;
+allow atcp ctl_ril-daemon-mtk_prop:property_service set;
+allow atcp gsm0710muxd_prop:property_service set;
+allow atcp devpts:chr_file setattr;
+allow atcp device:dir write;
+allow atcp self:capability chown;
+allow atcp self:capability fowner;
+allow atcp device:dir add_name;
+allow atcp device:lnk_file create;
+allow atcp init:unix_stream_socket connectto;
+allow atcp property_socket:sock_file write;
+allow atcp self:capability setuid;
+allow atcp device:dir remove_name;
+allow atcp device:lnk_file unlink;
+allow atcp eemcs_device:chr_file open;
+allow atcp eemcs_device:chr_file { read write };
+#
+# Ref. gsm0710muxd.te (End)
+#
+
+#
+# Ref. mtkrild.te (Begin)
+#
+allow atcp self:netlink_route_socket nlmsg_write;
+allow atcp kernel:system module_request;
+unix_socket_connect(atcp, property, init)
+allow atcp self:capability { setuid net_admin net_raw };
+allow atcp alarm_device:chr_file rw_file_perms;
+allow atcp cgroup:dir create_dir_perms;
+allow atcp radio_device:chr_file rw_file_perms;
+allow atcp radio_device:blk_file r_file_perms;
+allow atcp mtd_device:dir search;
+allow atcp efs_file:dir create_dir_perms;
+allow atcp efs_file:file create_file_perms;
+allow atcp shell_exec:file rx_file_perms;
+allow atcp bluetooth_efs_file:file r_file_perms;
+allow atcp bluetooth_efs_file:dir r_dir_perms;
+allow atcp radio_data_file:dir rw_dir_perms;
+allow atcp radio_data_file:file create_file_perms;
+allow atcp sdcard_type:dir r_dir_perms;
+allow atcp system_data_file:dir r_dir_perms;
+allow atcp system_data_file:file r_file_perms;
+allow atcp system_file:file x_file_perms;
+allow atcp proc:file write;
+allow atcp proc_net:file write;
+allow atcp eemcs_device:chr_file { read write };
+allow atcp eemcs_device:chr_file open;
+allow atcp eemcs_device:chr_file ioctl;
+allow atcp para_block_device:blk_file { read write open};
+
+# property service
+allow atcp radio_prop:property_service set;
+allow atcp net_radio_prop:property_service set;
+allow atcp system_radio_prop:property_service set;
+allow atcp persist_ril_prop:property_service set;
+auditallow atcp net_radio_prop:property_service set;
+auditallow atcp system_radio_prop:property_service set;
+allow atcp ril_cdma_report_prop:property_service set;
+
+# Read/Write to uart driver (for GPS)
+allow atcp gps_device:chr_file rw_file_perms;
+
+allow atcp tty_device:chr_file rw_file_perms;
+
+# Allow mtkrild to create and use netlink sockets.
+allow atcp self:netlink_socket create_socket_perms;
+allow atcp self:netlink_kobject_uevent_socket create_socket_perms;
+
+# Access to wake locks
+wakelock_use(atcp)
+
+allow atcp self:socket create_socket_perms;
+allow atcp Vcodec_device:chr_file { read write open };
+allow atcp devmap_device:chr_file { read ioctl open };
+allow atcp devpts:chr_file { read write open };
+allow atcp self:capability dac_override;
+
+allow atcp ccci_device:chr_file { read write ioctl open };
+allow atcp devpts:chr_file ioctl;
+allow atcp misc_device:chr_file { read write open };
+#allow atcp platformblk_device:blk_file { read write open };
+allow atcp proc_lk_env:file rw_file_perms;
+allow atcp sysfs_vcorefs_pwrctrl:file { open write };
+allow atcp ril_active_md_prop:property_service set;
+allow atcp ril_mux_report_case_prop:property_service set;
+allow atcp ctl_muxreport-daemon_prop:property_service set;
+allow atcp persist_service_atci_prop:property_service set;
+allow atcp block_device:dir search;
+#allow atcp platformblk_device:dir search;
+allow atcp platform_app:fd use;
+allow atcp radio:fd use;
+allow atcp radio_tmpfs:file write;
+allow atcp mmcblk0_block_device:blk_file { read write open };
+
+# For emulator
+allow atcp qemu_pipe_device:chr_file rw_file_perms;
+allow atcp socket_device:sock_file write;
+
+# For MAL MFI
+allow atcp mtkmal:unix_stream_socket connectto;
+allow atcp mal_mfi_socket:sock_file write;
+#
+# Ref. mtkrild.te (End)
+#
+
+#
+# Ref. atcid.te (Begin)
+#
+allow atcp self:capability dac_override;
+allow atcp init:unix_stream_socket connectto;
+allow atcp property_socket:sock_file write;
+allow atcp ttyGS_device:chr_file { read write ioctl open };
+allow atcp atci_service:unix_stream_socket connectto;
+allow atcp atci_service_socket:sock_file write;
+allow atcp mtkrild:unix_stream_socket connectto;
+allow atcp rild_atci_socket:sock_file write;
+allow atcp atci_audio_socket:sock_file write;
+allow atcp audiocmdservice_atci:unix_stream_socket connectto;
+allow atcp system_prop:property_service set;
+allow atcp persist_service_atci_prop:property_service set;
+allow atcp misc2_device:chr_file { read write open };
+allow atcp wmtWifi_device:chr_file { write open };
+allow atcp block_device:dir search;
+allow atcp misc2_block_device:blk_file { read write open };
+allow atcp mmcblk0_block_device:blk_file { open read write };
+allow atcp self:capability { net_admin net_raw };
+allow atcp self:udp_socket { create ioctl };
+allow atcp shell_exec:file execute;
+allow atcp socket_device:sock_file write;
+allow atcp shell_exec:file { read open };
+allow atcp statusd:unix_stream_socket connectto;
+allow atcp shell_exec:file execute_no_trans;
+allow atcp system_file:file execute_no_trans;
+allow atcp self:rawip_socket create;
+allow atcp self:rawip_socket getopt;
+allow atcp self:rawip_socket setopt;
+allow atcp rild_atci_c2k_socket:sock_file write;
+allow atcp viarild:unix_stream_socket connectto;
+allow atcp gpu_device:chr_file { read write open ioctl getattr };
+#allow atcp CAM_CAL_DRV1_device:chr_file { read write open };
+allow atcp pq:binder call;
+allow atcp rilproxy_atci_socket:sock_file write;
+allow atcp rilproxy:unix_stream_socket connectto;
+allow atcp self:capability sys_time;
+#
+# Ref. atcid.te (End)
+#
+
+#
+# Ref. volte_imsm_md.te (Begin)
+#
+# Date : WK15.33
+# Operation : Migration 
+# Purpose : for MTKMAL
+allow atcp socket_device:sock_file write;
+
+allow atcp rild_imsm_socket:sock_file write;
+
+# RILD connection
+allow atcp mtkrild:unix_stream_socket connectto;
+allow atcp rild_mal_socket:sock_file write;
+allow atcp rild_mal_at_socket:sock_file write;
+allow atcp rild_mal_md2_socket:sock_file write;
+allow atcp rild_mal_at_md2_socket:sock_file write;
+
+# IMCB connection
+allow atcp volte_imcb:unix_stream_socket connectto;
+allow atcp volte_imsa1_socket:sock_file write;
+
+# IMSM connection
+allow atcp mtkmal:unix_stream_socket connectto;
+allow atcp mal_mfi_socket:sock_file write;
+
+# NETd
+allow atcp netd:unix_stream_socket connectto;
+allow atcp netd_socket:sock_file write;
+
+# INIT
+allow atcp init:unix_stream_socket connectto;
+allow atcp property_socket:sock_file write;
+allow atcp ctl_volte_imcb_prop:property_service set;
+allow atcp ctl_volte_ua_prop:property_service set;
+allow atcp ctl_volte_stack_prop:property_service set;
+allow atcp volte_prop:property_service set;
+
+allow atcp self:capability { setuid setgid };
+
+allow atcp system_file:file execute_no_trans;
+
+allow atcp shell_exec:file { read execute open execute_no_trans };
+
+
+# ePDGa
+allow atcp devpts:chr_file setattr;
+allow atcp epdg_wod:unix_stream_socket connectto;
+allow atcp wod_sim_socket:sock_file write;
+allow atcp wod_action_socket:sock_file write;
+allow atcp self:udp_socket { create ioctl };
+#
+# Ref. volte_imsm_md.te (End)
+#
+
+#
+# Ref. emdlogger.te (Begin)
+#
+#=============allow emdlogger to set ==============
+allow atcp debug_mdlogger_prop:property_service set;
+allow atcp debug_prop:property_service set;
+allow atcp persist_mtklog_prop:property_service set;
+allow atcp system_radio_prop:property_service set;
+
+#=========================================================
+# ccci device for internal modem
+#=========================================================
+allow atcp ccci_device:chr_file { read write ioctl open };
+
+#=========================================================
+# eemcs device for external modem
+#=========================================================
+allow atcp eemcs_device:chr_file { read write ioctl open };
+
+#=========================================================
+# C2K project SDIO device for external modem
+# ttySDIO2 control port, ttySDIO8 log port
+#=========================================================
+allow atcp ttySDIO_device:chr_file { read write ioctl open };
+
+#=========================================================
+# C2K project modem device for external modem
+# vmodem start/stop/ioctl modem
+#=========================================================
+allow atcp vmodem_device:chr_file { read write ioctl open };
+
+#=========================================================
+# usb device ttyGSx for modem logger usb logging
+#=========================================================
+allow atcp ttyGS_device:chr_file { read write open ioctl};
+
+#=========================================================
+# for modem logging sdcard access
+#=========================================================
+allow atcp fuse:dir { write search create rmdir add_name remove_name read open rename};
+allow atcp fuse:file { write read create open rename unlink getattr setattr append};
+
+#=========================================================
+# modem logger access on /data/mdlog 
+#=========================================================
+allow atcp mdlog_data_file:dir { write search read create open rmdir remove_name add_name relabelto getattr};
+allow atcp mdlog_data_file:fifo_file { read write open create setattr};
+allow atcp mdlog_data_file:file { write read create open rename unlink getattr setattr append};
+allow atcp system_data_file:dir { write create open add_name relabelfrom};
+
+#=========================================================
+# modem logger control port access /dev/ttyC1
+#=========================================================
+allow atcp mdlog_device:chr_file { read write open ioctl};
+
+#=========================================================
+# modem logger socket access
+#=========================================================
+allow atcp property_socket:sock_file write;
+allow atcp init:unix_stream_socket connectto;
+allow atcp platform_app:unix_stream_socket connectto;
+
+allow atcp shell_exec:file { read execute open execute_no_trans };
+allow atcp system_file:file execute_no_trans;
+allow atcp zygote_exec:file { read getattr open execute execute_no_trans };
+#allow atcp tmpfs:lnk_file read;
+
+#=========================================================
+#modem logger SD logging in factory mode
+#=========================================================
+allow atcp vfat:dir create_dir_perms;
+allow atcp vfat:file create_file_perms;
+
+#=========================================================
+#modem logger permission in storage in android M version
+#=========================================================
+allow atcp log_device:chr_file { write open };
+allow atcp mnt_user_file:dir search;
+allow atcp mnt_user_file:lnk_file read;
+#allow atcp storage_file:dir search;
+allow atcp storage_file:lnk_file read;
+
+#=========================================================
+#permission for storage link access in vzw Project
+#=========================================================
+allow atcp mnt_media_rw_file:dir search;
+#
+# Ref. emdlogger.te (End)
+#
+
+#
+# Ref. mobile_log_d.te (Begin)
+#
+# Date : WK14.31
+# Operation : Migration 
+# Purpose : for L early bring-up
+allow atcp kernel:system syslog_mod;
+allow atcp sdcard_internal:dir create_dir_perms;
+allow atcp sdcard_internal:file create_file_perms;
+allow atcp platform_app:fd use;
+allow atcp platform_app_tmpfs:file write;
+#allow atcp unlabeled:lnk_file read;
+
+#GMO project
+dontaudit atcp untrusted_app:fd use;
+dontaudit atcp isolated_app:fd use;
+
+#md32 
+#sysfs label need to be changed later
+allow atcp sysfs:file write;
+allow atcp md32_device:chr_file { read open };
+
+#scp
+allow atcp sysfs_scp:file { open write };
+allow atcp sysfs_scp:dir search;
+allow atcp scp_device:chr_file { read open };
+
+#debug.MB.running
+allow atcp debug_prop:property_service set;
+
+allow atcp fuse:dir create_dir_perms;
+allow atcp fuse:file create_file_perms;
+allow atcp init:unix_stream_socket connectto;
+allow atcp property_socket:sock_file write;
+allow atcp system_file:file x_file_perms;
+#allow atcp tmpfs:lnk_file read;
+
+allow atcp logd:unix_stream_socket connectto;
+allow atcp logdr_socket:sock_file write;
+allow atcp self:capability { setuid setgid  };
+allow atcp self:capability2 syslog;
+allow atcp shell_exec:file rx_file_perms;
+
+#factory mode
+allow atcp vfat:dir create_dir_perms;
+allow atcp vfat:file create_file_perms;
+
+#data/misc/mblog
+allow atcp system_data_file:dir { relabelfrom create_dir_perms  };
+allow atcp logmisc_data_file:dir { relabelto create_dir_perms   };
+allow atcp logmisc_data_file:file create_file_perms;
+#data/log_temp
+allow atcp logtemp_data_file:dir { relabelto create_dir_perms   };
+allow atcp logtemp_data_file:file create_file_perms;
+#data/data_tmpfs_log
+allow atcp data_tmpfs_log_file:dir create_dir_perms;
+allow atcp data_tmpfs_log_file:file create_file_perms;
+
+# Date : WK15.29
+# Operation : Migration
+# Purpose : for device bring up, not to block early migration
+allow atcp log_device:chr_file r_file_perms;
+allow atcp storage_file:dir create_dir_perms;
+allow atcp storage_file:file create_file_perms;
+allow atcp storage_file:lnk_file create_file_perms;
+allow atcp mnt_user_file:dir create_dir_perms;
+allow atcp mnt_user_file:lnk_file create_file_perms;
+#chiptest mode storage access
+allow atcp mnt_media_rw_file:dir create_dir_perms;
+allow atcp mnt_media_rw_file:lnk_file create_file_perms;
+#
+# Ref. mobile_log_d.te (End)
+#
+
+#
+# Ref. netdiag.te (Begin)
+#
+# Date : WK14.31
+# Operation : Migration 
+# Purpose : for L early bring-up
+allow atcp shell_exec:file execute_no_trans;
+allow atcp sdcard_internal:dir { write search read create open add_name };
+allow atcp sdcard_internal:file { write create open getattr };
+allow atcp self:packet_socket { write ioctl setopt read getopt create };
+allow atcp fuse:dir { remove_name write search read remove_name open add_name create};
+allow atcp fuse:file { rename write getattr read create open unlink};
+
+allow atcp init:unix_stream_socket connectto;
+allow atcp property_socket:sock_file write;
+allow atcp self:capability { setuid net_raw setgid };
+allow atcp shell_exec:file { read execute open };
+#allow atcp tmpfs:lnk_file read;
+allow atcp domain:dir search;
+allow atcp domain:file { read open };
+#/proc/3523/net/xt_qtaguid/ctrl & /proc
+allow atcp qtaguid_proc:file { read getattr open };
+
+allow atcp self:capability net_admin;
+allow atcp self:udp_socket create;
+allow atcp system_file:file execute_no_trans;
+#/system/bin/aee
+#allow atcp aee_exec:file { read getattr open execute execute_no_trans };
+
+#ping
+allow atcp dnsproxyd_socket:sock_file write;
+allow atcp fwmarkd_socket:sock_file write;
+allow atcp netd:unix_stream_socket connectto;
+
+#ip
+allow atcp self:netlink_route_socket { write getattr setopt read bind create nlmsg_read };
+
+allow atcp net_data_file:file { read getattr open };
+allow atcp net_data_file:dir search;
+allow atcp self:rawip_socket { getopt create };
+allow atcp self:udp_socket ioctl;
+
+#for network log property
+allow atcp debug_netlog_prop:property_service set;
+allow atcp persist_mtklog_prop:property_service set;
+allow atcp debug_mtklog_prop:property_service set;
+
+
+# Date : WK15.29
+# Operation : Migration
+# Purpose : for device bring up, not to block early migration
+allow atcp tmpfs:lnk_file read;
+#allow atcp storage_file:dir search;
+allow atcp storage_file:lnk_file read;
+allow atcp mnt_user_file:dir search;
+allow atcp mnt_user_file:lnk_file read;
+allow atcp fuse:file create_file_perms;
+allow atcp platform_app:dir search;
+allow atcp servicemanager:binder call;
+allow atcp untrusted_app:dir search;
+
+# Date : WK15.35
+# Operation : Migration
+# Purpose : for M migration SQC
+typeattribute atcp mlstrustedsubject;
+allow atcp connectivity_service:service_manager find;
+allow atcp netstats_service:service_manager find;
+allow atcp self:udp_socket connect;
+allow atcp system_server:binder call;
+allow system_server atcp:fd use;
+binder_use(atcp)
+#
+# Ref. netdiag.te (End)
+#

@@ -1,0 +1,43 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+# Date : WK15.47
+# Operation : Feature Developing
+# Purpose : Fused location provider
+type mtkFlpDaemon, domain;
+type mtkFlpDaemon_exec, exec_type, file_type;
+
+init_daemon_domain(mtkFlpDaemon)
+net_domain(mtkFlpDaemon)
+
+# Purpose : Setup Connection with GPS
+allow mtkFlpDaemon init:unix_stream_socket connectto;
+allow mtkFlpDaemon init:udp_socket { read write };
+allow mtkFlpDaemon mnld:unix_dgram_socket sendto;
+allow mtkFlpDaemon mnld_data_file:dir create_dir_perms;
+allow mtkFlpDaemon mnld_data_file:sock_file create_file_perms;
+allow mtkFlpDaemon self:capability { fsetid dac_override };
+allow mtkFlpDaemon property_socket:sock_file rw_file_perms;
+allow mtkFlpDaemon slpd:unix_dgram_socket sendto;
+allow mtkFlpDaemon slpd:unix_dgram_socket recvfrom;
+allow mtkFlpDaemon system_server:unix_dgram_socket sendto;
+allow mtkFlpDaemon system_server:unix_stream_socket connectto;
+allow mtkFlpDaemon sysfs:file rw_file_perms;
+allow mtkFlpDaemon tmpfs:lnk_file { read create open };
+
+# Create data/mtk_flp_server as flp socket
+#type_transition mtkFlpDaemon system_data_file:sock_file mtkFlpDaemon_socket "mtk_flp_server";
+allow mtkFlpDaemon mtkFlpDaemon_socket:sock_file { create setattr getattr open read write append ioctl lock link unlink};
+allow mtkFlpDaemon system_data_file:dir remove_name;
+allow mtkFlpDaemon system_data_file:sock_file {unlink write read};
+
+# Purpose : For domain file implement
+file_type_auto_trans(mtkFlpDaemon,system_data_file,mtkFlpDaemon_data_file);
+allow mtkFlpDaemon mtkFlpDaemon_data_file:dir add_name;
+allow mtkFlpDaemon mtkFlpDaemon_data_file:dir create_dir_perms;
+allow mtkFlpDaemon mtkFlpDaemon_data_file:sock_file create_file_perms;
+allow mtkFlpDaemon mtkFlpDaemon_data_file:file create_file_perms;
+
+# Purpose : For wake monitor implementation
+allow mtkFlpDaemon sysfs_wake_lock:file { open read getattr };
+

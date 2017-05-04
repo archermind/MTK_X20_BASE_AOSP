@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AudioParam>
+	<ParamTree>
+		<Param path="Sound recording,Handset" param_id="0"/>
+		<Param path="Sound recording,Headset" param_id="0"/>
+		<Param path="Sound recording,HS5POLE" param_id="3"/>
+		<Param path="Sound recording,HS5POLE_ANC" param_id="3"/>
+
+		<Param path="Camera recording,Handset" param_id="2"/>
+		<Param path="Camera recording,Headset" param_id="2"/>
+		<Param path="Camera recording,HS5POLE" param_id="3"/>
+		<Param path="Camera recording,HS5POLE_ANC" param_id="3"/>
+
+		<Param path="CUSTOMIZATION1,Handset" param_id="2"/>
+		<Param path="CUSTOMIZATION1,Headset" param_id="2"/>
+		<Param path="CUSTOMIZATION1,HS5POLE" param_id="3"/>
+		<Param path="CUSTOMIZATION1,HS5POLE_ANC" param_id="3"/>
+
+		<Param path="VR,Handset" param_id="2"/>
+		<Param path="VR,Headset" param_id="2"/>
+		<Param path="VR,HS5POLE" param_id="3"/>
+		<Param path="VR,HS5POLE_ANC" param_id="3"/>
+
+		<Param path="VOICE_UNLOCK,Handset" param_id="2"/>
+		<Param path="VOICE_UNLOCK,Headset" param_id="2"/>
+		<Param path="VOICE_UNLOCK,HS5POLE" param_id="3"/>
+		<Param path="VOICE_UNLOCK,HS5POLE_ANC" param_id="3"/>
+
+		<Param path="CUSTOMIZATION2,Handset" param_id="2"/>
+		<Param path="CUSTOMIZATION2,Headset" param_id="2"/>
+		<Param path="CUSTOMIZATION2,HS5POLE" param_id="3"/>
+		<Param path="CUSTOMIZATION2,HS5POLE_ANC" param_id="3"/>
+
+		<Param path="CUSTOMIZATION3,Handset" param_id="1"/>
+		<Param path="CUSTOMIZATION3,Headset" param_id="1"/>
+		<Param path="CUSTOMIZATION3,HS5POLE" param_id="3"/>
+		<Param path="CUSTOMIZATION3,HS5POLE_ANC" param_id="3"/>
+
+		<Param path="FastRecord,Handset" param_id="0"/>
+		<Param path="FastRecord,Headset" param_id="0"/>
+		<Param path="FastRecord,HS5POLE" param_id="3"/>
+		<Param path="FastRecord,HS5POLE_ANC" param_id="3"/>
+	</ParamTree>
+	<ParamUnitPool>
+		<ParamUnit param_id="0">
+			<Param name="ul_gain" value="34"/>
+		</ParamUnit>
+		<ParamUnit param_id="1">
+			<Param name="ul_gain" value="0"/>
+		</ParamUnit>
+		<ParamUnit param_id="2">
+			<Param name="ul_gain" value="32"/>
+		</ParamUnit>
+		<ParamUnit param_id="3">
+			<Param name="ul_gain" value="24"/>
+		</ParamUnit>
+	</ParamUnitPool>
+</AudioParam>

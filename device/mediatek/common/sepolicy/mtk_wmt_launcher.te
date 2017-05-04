@@ -1,0 +1,29 @@
+# ==============================================
+# Policy File of /system/binmtk_wmt_launcher Executable File 
+
+
+# ==============================================
+# Type Declaration
+# ==============================================
+
+type mtk_wmt_launcher_exec , exec_type, file_type;
+type mtk_wmt_launcher ,domain;
+
+# ==============================================
+# Android Policy Rule
+# ==============================================
+
+# ==============================================
+# NSA Policy Rule
+# ==============================================
+
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+allow mtk_wmt_launcher wmt_prop:property_service set;
+allow mtk_wmt_launcher init:unix_stream_socket connectto;
+allow mtk_wmt_launcher property_socket:sock_file write;
+allow mtk_wmt_launcher stpwmt_device:chr_file { read write ioctl open };
+allow mtk_wmt_launcher devpts:chr_file { read write };
+init_daemon_domain(mtk_wmt_launcher)

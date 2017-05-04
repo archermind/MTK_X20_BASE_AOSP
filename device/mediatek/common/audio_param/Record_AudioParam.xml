@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AudioParam version="1.0">
+	<ParamTree>
+		<Param path="" param_id="5"/>
+		<Param path="VR" param_id="0"/>
+		<Param path="FastRecord" param_id="9"/>
+		<Param path="VoiceUnLk" param_id="5"/>
+		<Param path="BT earphone" param_id="5"/>
+
+		<Param path="Customization2,Handset" param_id="7"/>
+		<Param path="Customization2,3-pole HS" param_id="8"/>
+		<Param path="Customization2,4-pole HS" param_id="8"/>
+		<Param path="Customization2,5-pole HS" param_id="8"/>
+		<Param path="Customization2,5-pole HS+ANC" param_id="8"/>
+
+		<!-- ASR -->
+		<Param path="ASR,Handset" param_id="6"/>
+		<Param path="ASR,3-pole HS" param_id="5"/>
+		<Param path="ASR,4-pole HS" param_id="5"/>
+		<Param path="ASR,5-pole HS" param_id="5"/>
+		<Param path="ASR,5-pole HS+ANC" param_id="5"/>
+
+		<!-- Sound recorder normal -->
+		<Param path="SndRecNormal,Handset" param_id="1"/>
+		<Param path="SndRecNormal,3-pole HS" param_id="2"/>
+		<Param path="SndRecNormal,4-pole HS" param_id="2"/>
+		<Param path="SndRecNormal,5-pole HS" param_id="2"/>
+		<Param path="SndRecNormal,5-pole HS+ANC" param_id="2"/>
+
+		<!-- Sound recorder lecture -->
+		<Param path="SndRecLecture,Handset" param_id="4"/>
+		<Param path="SndRecLecture,3-pole HS" param_id="4"/>
+		<Param path="SndRecLecture,4-pole HS" param_id="4"/>
+		<Param path="SndRecLecture,5-pole HS" param_id="4"/>
+		<Param path="SndRecLecture,5-pole HS+ANC" param_id="4"/>
+
+		<!-- Sound recorder meeting -->
+		<Param path="SndRecMeeting,Handset" param_id="3"/>
+		<Param path="SndRecMeeting,3-pole HS" param_id="3"/>
+		<Param path="SndRecMeeting,4-pole HS" param_id="3"/>
+		<Param path="SndRecMeeting,5-pole HS" param_id="3"/>
+		<Param path="SndRecMeeting,5-pole HS+ANC" param_id="3"/>
+
+		<!-- Video recorder normal -->
+		<Param path="CamRecNormal,Handset" param_id="1"/>
+		<Param path="CamRecNormal,3-pole HS" param_id="2"/>
+		<Param path="CamRecNormal,4-pole HS" param_id="2"/>
+		<Param path="CamRecNormal,5-pole HS" param_id="2"/>
+		<Param path="CamRecNormal,5-pole HS+ANC" param_id="2"/>
+
+		<!-- Video recorder meeting -->
+		<Param path="CamRecMeeting,Handset" param_id="3"/>
+		<Param path="CamRecMeeting,3-pole HS" param_id="3"/>
+		<Param path="CamRecMeeting,4-pole HS" param_id="3"/>
+		<Param path="CamRecMeeting,5-pole HS" param_id="3"/>
+		<Param path="CamRecMeeting,5-pole HS+ANC" param_id="3"/>
+	</ParamTree>
+	<ParamUnitPool>
+		<ParamUnit param_id="0">
+			<Param name="record_mode_para" value="0,479,16388,36892,4356,8192,768,4,36624,197,611,0,0,0,0,8192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		</ParamUnit>
+		<ParamUnit param_id="1">
+			<Param name="record_mode_para" value="0,479,16388,36892,37639,8192,896,4,36624,197,611,0,0,0,0,8192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		</ParamUnit>
+		<ParamUnit param_id="2">
+			<Param name="record_mode_para" value="0,479,16388,36892,37639,8192,1152,4,36624,197,611,0,0,0,0,8192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		</ParamUnit>
+		<ParamUnit param_id="3">
+			<Param name="record_mode_para" value="0,479,16388,36892,37127,8192,1152,4,36560,197,611,0,0,0,0,8192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		</ParamUnit>
+		<ParamUnit param_id="4">
+			<Param name="record_mode_para" value="0,479,16388,36892,37127,8192,1664,12,36688,197,611,0,0,0,0,8192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		</ParamUnit>
+		<ParamUnit param_id="5">
+			<Param name="record_mode_para" value="0,479,16388,36892,37124,8192,768,0,4048,197,611,0,0,0,0,8192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		</ParamUnit>
+		<ParamUnit param_id="6">
+			<Param name="record_mode_para" value="0,192,32512,36892,37124,8192,768,0,4048,197,611,0,32520,0,0,8192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		</ParamUnit>
+		<ParamUnit param_id="7">
+			<Param name="record_mode_para" value="34464,194,32512,28,40960,28,0,10,468,197,611,0,32520,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		</ParamUnit>
+		<ParamUnit param_id="8">
+			<Param name="record_mode_para" value="0,479,32512,28,40960,28,0,4,468,197,611,0,32520,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		</ParamUnit>
+		<ParamUnit param_id="9">
+			<Param name="record_mode_para" value="870,0,0,0,0,0,0,26122,0,0,0,0,0,0,0,26214,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		</ParamUnit>
+	</ParamUnitPool>
+</AudioParam>

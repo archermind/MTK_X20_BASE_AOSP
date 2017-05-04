@@ -1,0 +1,17 @@
+on property:hotknot.hotknot_native=1
+    start hotknot_native
+
+on property:hotknot.hotknot_native=0
+    stop hotknot_native
+
+service hotknot_native /system/bin/hotknot_native_service
+    class late_start
+    user system
+    group system
+    oneshot
+
+service pppd_btdun /system/bin/pppd_btdun silent pppbt-setsockname ppp.bt.dun pppbt-setipaddr 192.168.44.1
+    class late_start
+    user bluetooth
+    group vpn net_admin net_raw
+

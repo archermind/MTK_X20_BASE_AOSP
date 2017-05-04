@@ -1,0 +1,7 @@
+on property:sys.mtk_zygote_secondary=1
+    start debuggerd64
+    start zygote_secondary
+
+on property:sys.mtk_zygote_secondary=0
+    stop zygote_secondary
+    stop debuggerd64

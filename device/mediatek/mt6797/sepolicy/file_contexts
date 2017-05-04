@@ -1,0 +1,33 @@
+#########################################
+# Platform dependent label definitions
+#
+
+# define raw block partition label
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/proinfo		u:object_r:nvram_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/nvram		u:object_r:nvram_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/nvdata		u:object_r:nvdata_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/frp		u:object_r:frp_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/expdb		u:object_r:expdb_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/misc2		u:object_r:misc2_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/logo		u:object_r:logo_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/para		u:object_r:para_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/tee1		u:object_r:tee_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/tee2		u:object_r:tee_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/seccfg		u:object_r:seccfg_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/userdata		u:object_r:userdata_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/cache		u:object_r:cache_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/recovery		u:object_r:recovery_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/protect1		u:object_r:protect1_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/protect2		u:object_r:protect2_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/keystore		u:object_r:keystore_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/oemkeystore	u:object_r:oemkeystore_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/boot	        u:object_r:boot_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/persist		u:object_r:persist_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/system            u:object_r:system_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/nvcfg             u:object_r:nvcfg_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/md1img            u:object_r:md_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/md1dsp            u:object_r:dsp_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/md1arm7           u:object_r:md_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/md3img            u:object_r:md_block_device:s0
+
+/dev/gps_emi(/.*)? u:object_r:gps_emi_device:s0

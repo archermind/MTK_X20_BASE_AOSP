@@ -1,0 +1,45 @@
+on property:vold.decrypt=trigger_restart_framework
+    setprop soter.teei.vold.decrypt OK
+
+on post-fs-data
+    write /proc/bootprof "start teei cfg (on post-fs-data)"
+    mkdir /data/thh
+    mkdir /data/thh/system
+    chmod 0755 /data/thh
+    chown system system /data/thh
+    chmod 0755 /data/thh/system
+    chown system system /data/thh/system
+    chmod 0666 /dev/teei_client
+    chown system system /dev/teei_client
+    chmod 0660 /dev/teei_config
+    chown system system /dev/teei_config
+    chmod 0660 /dev/tz_vfs
+    chown system system /dev/tz_vfs
+    chmod 0666 /dev/teei_fp
+    chown system /dev/teei_fp
+    chmod 0660 /dev/emmcrpmb0
+    chown system system /dev/emmcrpmb0
+    write /proc/bootprof "start teei cfg end (on post-fs-data)"
+
+on boot
+    write /proc/bootprof "start teei_daemon (on boot)"
+    start teei_daemon
+    write /proc/bootprof "start teei_daemon end (on boot)"
+
+# teei service daemon
+service teei_daemon /system/bin/teei_daemon
+    class core
+    user system
+    group system
+    disabled
+   # oneshot
+
+#on property:soter.teei.init=INIT_OK
+#    start init_thh_service
+
+#service init_thh_service /system/bin/init_thh init
+#    class core
+#    user system
+#    group system
+#    disabled
+#    oneshot
