@@ -1,0 +1,27 @@
+Library of MTK video driver, icluding vdec and venc 
+
+This library is pre-built by MediaTek internal.
+
+WHAT IT DOES?
+=============
+libvcodecdrv.so contains MediaTek developed video codec modules.  
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  liblog.so
+2.  libcutils.so
+
+and the following libs from MediaTek:
+1.  libmtk_drvb.so
+2.  libmet-tag.so
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+HOW TO USE IT?
+==============
+
+all api interface are at (vendor/mediatek/proprietary/hardware/libvcodec/mt6797/common/)
+
+All the source code of this library were written by MediaTek co..

@@ -1,0 +1,64 @@
+/* Copyright Statement:
+ *
+ * This software/firmware and related documentation ("MediaTek Software") are
+ * protected under relevant copyright laws. The information contained herein
+ * is confidential and proprietary to MediaTek Inc. and/or its licensors.
+ * Without the prior written permission of MediaTek inc. and/or its licensors,
+ * any reproduction, modification, use or disclosure of MediaTek Software,
+ * and information contained herein, in whole or in part, shall be strictly prohibited.
+ */
+/* MediaTek Inc. (C) 2015. All rights reserved.
+ *
+ * BY OPENING THIS FILE, RECEIVER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND AGREES
+ * THAT THE SOFTWARE/FIRMWARE AND ITS DOCUMENTATIONS ("MEDIATEK SOFTWARE")
+ * RECEIVED FROM MEDIATEK AND/OR ITS REPRESENTATIVES ARE PROVIDED TO RECEIVER ON
+ * AN "AS-IS" BASIS ONLY. MEDIATEK EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NONINFRINGEMENT.
+ * NEITHER DOES MEDIATEK PROVIDE ANY WARRANTY WHATSOEVER WITH RESPECT TO THE
+ * SOFTWARE OF ANY THIRD PARTY WHICH MAY BE USED BY, INCORPORATED IN, OR
+ * SUPPLIED WITH THE MEDIATEK SOFTWARE, AND RECEIVER AGREES TO LOOK ONLY TO SUCH
+ * THIRD PARTY FOR ANY WARRANTY CLAIM RELATING THERETO. RECEIVER EXPRESSLY ACKNOWLEDGES
+ * THAT IT IS RECEIVER'S SOLE RESPONSIBILITY TO OBTAIN FROM ANY THIRD PARTY ALL PROPER LICENSES
+ * CONTAINED IN MEDIATEK SOFTWARE. MEDIATEK SHALL ALSO NOT BE RESPONSIBLE FOR ANY MEDIATEK
+ * SOFTWARE RELEASES MADE TO RECEIVER'S SPECIFICATION OR TO CONFORM TO A PARTICULAR
+ * STANDARD OR OPEN FORUM. RECEIVER'S SOLE AND EXCLUSIVE REMEDY AND MEDIATEK'S ENTIRE AND
+ * CUMULATIVE LIABILITY WITH RESPECT TO THE MEDIATEK SOFTWARE RELEASED HEREUNDER WILL BE,
+ * AT MEDIATEK'S OPTION, TO REVISE OR REPLACE THE MEDIATEK SOFTWARE AT ISSUE,
+ * OR REFUND ANY SOFTWARE LICENSE FEES OR SERVICE CHARGE PAID BY RECEIVER TO
+ * MEDIATEK FOR SUCH MEDIATEK SOFTWARE AT ISSUE.
+ */
+
+#ifndef _DPRAM_H_
+#define _DPRAM_H_
+
+/* MD1 */
+#define MD1_SPH_DM_ADDR_SE_PTR               0x3e6d
+#define MD1_SPH_DM_ADDR_SD_PTR               0x3e6e
+#define MD1_SPH_DM_ADDR_SE2_PTR              0x3d92
+#define MD1_SPH_DM_ADDR_SE3_BUF              0x3d93
+#define MD1_SPH_DM_ADDR_SE4_BUF              0x3d94
+
+#define MD1_SPH_OD_HANDSHAKE_OD              0x3f65
+#define MD1_SPH_OD_TCM_ADDR_H                0x3f69
+#define MD1_SPH_OD_TCM_ADDR_L                0x3f6a
+#define MD1_SPH_OD_INT_CTRL1                 0x3f6b
+#define MD1_SPH_OD_INT_CTRL2                 0x3f6c
+#define MD1_SPH_OD_ECHO_REF_DELAY            0x3f6d
+
+/* MD3 */
+#define MD3_SPH_DM_ADDR_SE_PTR               0x3ae0
+#define MD3_SPH_DM_ADDR_SD_PTR               0x3ae1
+#define MD3_SPH_DM_ADDR_SE2_PTR              0x3a05
+#define MD3_SPH_DM_ADDR_SE3_BUF              0x3a06
+#define MD3_SPH_DM_ADDR_SE4_BUF              0x3a07
+
+#define MD3_SPH_OD_HANDSHAKE_OD              0x3ba4
+#define MD3_SPH_OD_TCM_ADDR_H                0x3ba8
+#define MD3_SPH_OD_TCM_ADDR_L                0x3ba9
+#define MD3_SPH_OD_INT_CTRL1                 0x3baa
+#define MD3_SPH_OD_INT_CTRL2                 0x3bab
+#define MD3_SPH_OD_ECHO_REF_DELAY            0x3bac
+
+/* Sherif marco end */
+#endif

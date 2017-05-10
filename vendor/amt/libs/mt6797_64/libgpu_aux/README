@@ -1,0 +1,14 @@
+A common interface for color conversion for GPU drivers.
+
+WHAT IT DOES?
+=============
+The libgpu_aux.so provide a interface for GPU drivers to support 
+MTK's color format, such as NV12, or other MTK PRIVATE FORMAT.
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from MTK:
+1.  libdpframework.so
+
+HOW TO USE IT?
+==============

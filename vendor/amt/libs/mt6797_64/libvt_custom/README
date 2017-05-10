@@ -1,0 +1,20 @@
+This module creates the libvt_custom.so libary file.
+
+WHAT IT DOES?
+=============
+libvt_custom mainly used for supporting customer to do some customization for 3G VT
+Customer can change many 3G VT parameters, such as the frame rate, codec parameter.
+This lib linked by libvtmal.so
+ 
+HOW IT WAS BUILT?
+==================
+libvt_custom is not depending on any other lib
+    
+    
+HOW TO USE IT?
+==============
+customer can change the parameters in custom_vt_video_enc_setting.cpp
+and rebuild libvt_custom
+Then libvtmal.so will use the changed value during 3G VT
+
+The source code for this library were written by MediaTek.

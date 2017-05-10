@@ -1,0 +1,34 @@
+Library of MTK video codec driver utility, icluding video codec specified m4u, memory allocate, 
+memory map, command queue related funcitons to help decoder fullfilling it's functionality.
+
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+libvcodec_utility contains MediaTek developed video decoder related utilites.
+Without them, video playback & record functionalities will not work¡¨
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  libcutils.so
+2.  libsched.so
+
+and the following libs from MediaTek:
+1.  libbwc.so
+2.  libm4u.so
+3.  libgralloc_extra.so
+4.  ibion.so
+5.  libion_mtk.so
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+HOW TO USE IT?
+==============
+
+Provide utility api for SW codec and HW codec HAL to control the video codecs.
+all api interface are at (device/mediatek/common/kernel-headers)
+
+All the source code of this library were written by MediaTek co..

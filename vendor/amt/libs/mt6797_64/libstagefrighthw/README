@@ -1,0 +1,9 @@
+Stagefright OMX plug-in for MTK OpenMAX IL
+
+WHAT IT DOES?
+=============
+Provide entry of MTK OMX IL to stagefright
+
+HOW TO USE IT?
+==============
+Used by OMXMaster

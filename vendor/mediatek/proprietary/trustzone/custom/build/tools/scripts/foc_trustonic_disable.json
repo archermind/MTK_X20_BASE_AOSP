@@ -1,0 +1,68 @@
+{
+    "android": {
+        "CONFIG": "device/mediatek/${PROJECT}/ProjectConfig.mk",
+        "OPTIONS": {
+            "MTK_TEE_SUPPORT": "no",
+            "TRUSTONIC_TEE_SUPPORT": "no"
+        }
+    },
+    "preloader": {
+        "CONFIG": "vendor/mediatek/proprietary/bootable/bootloader/preloader/custom/${PROJECT}/cust_bldr.mak",
+        "OPTIONS": {
+            "CFG_TEE_SUPPORT": "0",
+            "CFG_TRUSTONIC_TEE_SUPPORT": "0"
+        }
+    },
+    "lk": {
+        "CONFIG": "vendor/mediatek/proprietary/bootable/bootloader/lk/project/${PROJECT}.mk",
+        "OPTIONS": {
+            "TRUSTONIC_TEE_SUPPORT": "no"
+        }
+    },
+    "tlk-project": {
+        "CONFIG": "trusty/vendor/mediatek/proprietary/project/${PROJECT}.mk",
+        "OPTIONS": {
+        }
+    },
+    "tlk-platform": {
+        "CONFIG": "trusty/vendor/mediatek/proprietary/platform/${PLATFORM}/rules.mk",
+        "OPTIONS": {
+        }
+    },
+    "trustzone": {
+        "CONFIG": "vendor/mediatek/proprietary/trustzone/custom/build/project/${PROJECT}.mk",
+        "OPTIONS": {
+            "MTK_ATF_SUPPORT": "yes",
+            "MTK_TEE_SUPPORT": "no",
+            "TRUSTONIC_TEE_SUPPORT": "no",
+            "MTK_TEE_DRAM_SIZE": "0x1200000"
+        }
+    },
+    "kernel-debug": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_debug_defconfig",
+        "OPTIONS": {
+            "CONFIG_TRUSTONIC_TEE_SUPPORT": "is not set",
+            "CONFIG_TRUSTONIC_TEE_VERSION": "is not set",
+            "CONFIG_MOBICORE_DRIVER": "is not set",
+            "CONFIG_MOBICORE_DEBUG": "is not set",
+            "CONFIG_MOBICORE_VERBOSE": "is not set",
+            "CONFIG_MOBICORE_API": "is not set",
+            "CONFIG_TRUSTONIC_TRUSTED_UI": "is not set",
+            "CONFIG_TRUSTONIC_TRUSTED_UI_FB_BLANK": "is not set"
+        }
+    },
+    "kernel": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_defconfig",
+        "OPTIONS": {
+            "CONFIG_TRUSTONIC_TEE_SUPPORT": "is not set",
+            "CONFIG_TRUSTONIC_TEE_VERSION": "is not set",
+            "CONFIG_MOBICORE_DRIVER": "is not set",
+            "CONFIG_MOBICORE_DEBUG": "is not set",
+            "CONFIG_MOBICORE_VERBOSE": "is not set",
+            "CONFIG_MOBICORE_API": "is not set",
+            "CONFIG_TRUSTONIC_TRUSTED_UI": "is not set",
+            "CONFIG_TRUSTONIC_TRUSTED_UI_FB_BLANK": "is not set"
+        }
+    }
+}
+

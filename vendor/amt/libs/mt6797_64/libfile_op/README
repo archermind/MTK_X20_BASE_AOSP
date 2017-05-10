@@ -1,0 +1,38 @@
+This directory contains NvRAM libfile_op interface, which defines the interface of
+libfile_op and is used to build a libfile_op related shared library.
+
+
+WHAT IT DOES?
+=============
+It provide interface to backup NvRAM data to backup partition.
+and restore NvRAM partition when fielsystem is empty.
+Without NvRAM backup or restore feature, factory data maybe lost in some
+case.
+
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following libs from AOSP:
+1.  libc.so
+2.  libcutils.so
+
+and the following libs from MediaTek:
+1.  libnvram.so
+2.  libcustom_nvram.so
+
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+
+HOW TO USE IT?
+==============
+
+Files in this directory is used to
+generate a shared library 'libfile_op.so'.
+
+The shared library 'libfile_op.so' is loaded and invoked by
+meta tool for backup, invoked by NvRAM daemon tool for restore operation.
+
+

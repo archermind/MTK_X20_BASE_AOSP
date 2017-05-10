@@ -1,0 +1,29 @@
+This directory contains Bluetooth hardware test tool source code.
+
+WHAT IT DOES?
+=============
+It provides a test UI from adb shell command for Bluetooth hardware test.
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following libs from AOSP:
+1. libdl.so
+
+and the following libs from MediaTek:
+1. liblog.so
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+
+HOW TO USE IT?
+==============
+
+Files in this directory is used to
+1. Generate a executable binary named 'autobt', which can be runned in adb shell.
+2. Generate a library named 'libbluetooth_hw_test.so', which provides the actual command function for autobt test tool.
+
+
+All the source code of this library were written by MediaTek co..
+

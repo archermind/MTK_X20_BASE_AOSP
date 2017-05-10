@@ -1,0 +1,26 @@
+The shared library 'libmtkshifter.so' is an audio shifter implementation.
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+
+Audio shifter is the implementation that transform the audio content PCM
+format with shift operation.
+
+
+HOW IT WAS BUILT?
+==================
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/proprietary/external/shifter' folder.
+
+
+HOW TO USE IT?
+==============
+
+The shared library 'libmtkshifter.so' is loaded and invoked by
+audio post-process.
+
+
+All the source code of this library were written by MediaTek co..

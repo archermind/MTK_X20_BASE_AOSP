@@ -1,0 +1,17 @@
+
+WHAT IT DOES?
+=============
+camera related custom files
+
+
+HOW IT WAS BUILT?
+==================
+It can build the following static library:
+libcameracustom.camera.a
+
+
+HOW TO USE IT?
+==============
+Provide api for camera customization.
+
+

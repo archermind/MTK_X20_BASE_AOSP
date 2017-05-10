@@ -1,0 +1,15 @@
+WHAT IT DOES?
+=============
+libcurl.so is the implementation that access URL for downloading epo data as one shared library.
+
+HOW IT WAS BUILT?
+==================
+As library files, these are built by android build system.
+
+HOW TO USE IT?
+==============
+Their API will be called to download epo data when GPS open if epo file is expired.
+
+Source
+==============
+All the source code of this library were downloaded from http://curl.haxx.se/

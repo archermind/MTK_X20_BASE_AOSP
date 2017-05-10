@@ -1,0 +1,10 @@
+API interface of MTK hardware accelerator for image resize,
+rotate,color space transform for this device
+
+
+HOW TO USE IT?
+==============
+
+Provide api for every module which needs to do image related functions.
+(i.e. surfaceflinger/gpu/venc/camera ... )
+Those caller modules are all under HAL layer.

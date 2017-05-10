@@ -1,0 +1,17 @@
+Library of MTK provided SW/HW video codec, including encoder and decoder.
+
+This library is pre-built by MediaTek internal.
+
+WHAT IT DOES?
+=============
+libvp8dec_hw.a is hw vp8 decoder
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  libc.so
+2.  libcutils.so
+
+HOW TO USE IT?
+==============
+It is used to decode vp8 bitstream to YUV frame

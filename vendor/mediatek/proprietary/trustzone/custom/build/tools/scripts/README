@@ -1,0 +1,39 @@
+===================================================================================
+Script : changeTEE.pl
+This is a script used to turn on/off TEE options in MediaTek platform.
+===================================================================================
+
+Usage:
+  ./changeTEE.pl --config=ConfigFile --project=Project --kernel=Kernel_Version
+
+Example:
+  ./changeTEE.pl --config=trustonicArmv8_on.xml --project=k53v1_64 --kernel=kernel-3.18
+  ./changeTEE.pl --config=trustonicArmv7_on.xml --project=k80hd --kernel=kernel-3.18
+  ./changeTEE.pl --config=trustonicArmv8_off.xml --project=k53v1_64 --kernel=kernel-3.18
+  ./changeTEE.pl --config=trustonicArmv7_off.xml --project=k80hd --kernel=kernel-3.18
+  ./changeTEE.pl --config=trustyArmv8_on.xml --project=k53v1_64 --kernel=kernel-3.18
+  ./changeTEE.pl --config=trustyArmv7_on.xml --project=k80hd --kernel=kernel-3.18
+  ./changeTEE.pl --config=trustyArmv8_off.xml --project=k53v1_64 --kernel=kernel-3.18
+  ./changeTEE.pl --config=trustyArmv7_off.xml --project=k80hd --kernel=kernel-3.18
+  ./changeTEE.pl --config=teeiArmv8_on.xml --project=k53v1_64 --kernel=kernel-3.18
+  ./changeTEE.pl --config=teeiArmv8_off.xml --project=k53v1_64 --kernel=kernel-3.18
+
+===================================================================================
+Script : checkTEE.py
+This is a script used to check TEE options in MediaTek platform.
+===================================================================================
+
+Usage:
+  ./checkTEE.py --project=Project --platform=Platform --kernel=Kernel_Version ConfigFile.json
+
+Example:
+  ./checkTEE.py --project=k53v1_64 --platform=mt6735 --kernel=kernel-3.18 foc_trustonic_enable.json
+  ./checkTEE.py --project=k53v1_64 --platform=mt6735 --kernel=kernel-3.18 foc_trustonic_disable.json
+  ./checkTEE.py --project=k80hd --platform=mt6580 --kernel=kernel-3.18 foc_trustonic_enable.json
+  ./checkTEE.py --project=k80hd --platform=mt6580 --kernel=kernel-3.18 foc_trustonic_disable.json
+  ./checkTEE.py --project=k53v1_64 --platform=mt6735 --kernel=kernel-3.18 foc_trusty_enable.json
+  ./checkTEE.py --project=k53v1_64 --platform=mt6735 --kernel=kernel-3.18 foc_trusty_disable.json
+  ./checkTEE.py --project=k80hd --platform=mt6580 --kernel=kernel-3.18 foc_trusty_enable.json
+  ./checkTEE.py --project=k80hd --platform=mt6580 --kernel=kernel-3.18 foc_trusty_disable.json
+  ./checkTEE.py --project=k53v1_64 --platform=mt6735 --kernel=kernel-3.18 foc_teei_enable.json
+  ./checkTEE.py --project=k53v1_64 --platform=mt6735 --kernel=kernel-3.18 foc_teei_disable.json

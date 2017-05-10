@@ -1,0 +1,33 @@
+Library of MTK JPEG Decode feature.
+
+This library is pre-built by MediaTek internal.
+
+WHAT IT DOES?
+=============
+libJpgDecPipe.so controls the MTK JPEG Decode flow and dispatch the decode tasks and parameters
+to either SW or HW encoder to do the JPEG Decode tasks. This library also controls MTK HW resizing, 
+rotating and Image quality tuning functions for Image postprocessing.
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  liblog.so
+2.  libutils.so
+3.  libcutils.so
+4.  libion.so
+
+and the following libs from MediaTek:
+1.  libion_mtk.so
+2.  libm4u.so
+3.  libSwJpgCodec.so
+4.  libGdmaScalerPipe.so
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+HOW TO USE IT?
+==============
+Provide api for JPEG Decode feature called from libmHalImageCodec.so.
+all api interfaces are at (vendor\mediatek\proprietary\platform\mt6572\hardware\jpeg\inc)
+
+All the source code of this library were written by MediaTek co..

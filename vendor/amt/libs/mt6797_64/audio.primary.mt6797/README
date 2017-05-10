@@ -1,0 +1,44 @@
+The shared library 'audio.primary.mt6795.so' implements the audio hal of android.
+
+
+WHAT IT DOES?
+=============
+
+The shared library 'audio.primary.mt6797.so' implements the audio hal of android which defined in audio.h of hardware\libhardware\include\hardware.
+
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following library from AOSP:
+1.  libmedia.so
+2.  libcutils.so
+3.  libutils.so
+4.  libbinder.so
+5.  libhardware_legacy.so
+6.  libhardware.so
+7.  libdl.so
+8.  libpowermanager.so
+
+
+and the following libs from MediaTek:
+1.  libblisrc.so
+2.  libnvram.so
+3.  libspeech_enh_lib.so
+4.  libaudiocustparam.so
+5.  libaudiosetting.so
+6.  libaudiocompensationfilter.so
+7.  libcvsd_mtk.so
+8.  libmsbc_mtk.so
+9.  libaudioutils.so
+10. libaudiocomponentengine.so
+11. libcustom_nvram.so
+
+
+
+HOW TO USE IT?
+==============
+
+The releated APIs of audio hal is used by audioflinger module.
+
+

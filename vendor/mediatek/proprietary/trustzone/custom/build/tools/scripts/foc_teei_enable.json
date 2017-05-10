@@ -1,0 +1,59 @@
+{
+    "android": {
+        "CONFIG": "device/mediatek/${PROJECT}/ProjectConfig.mk",
+        "OPTIONS": {
+            "MTK_TEE_SUPPORT": "yes",
+            "MICROTRUST_TEE_SUPPORT": "yes"
+        }
+    },
+    "preloader": {
+        "CONFIG": "vendor/mediatek/proprietary/bootable/bootloader/preloader/custom/${PROJECT}/cust_bldr.mak",
+        "OPTIONS": {
+            "CFG_TEE_SUPPORT": "1",
+            "CFG_MICROTRUST_TEE_SUPPORT": "1"
+        }
+    },
+    "lk": {
+        "CONFIG": "vendor/mediatek/proprietary/bootable/bootloader/lk/project/${PROJECT}.mk",
+        "OPTIONS": {
+        }
+    },
+    "tlk-project": {
+        "CONFIG": "trusty/vendor/mediatek/proprietary/project/${PROJECT}.mk",
+        "OPTIONS": {
+        }
+    },
+    "tlk-platform": {
+        "CONFIG": "trusty/vendor/mediatek/proprietary/platform/${PLATFORM}/rules.mk",
+        "OPTIONS": {
+        }
+    },
+    "trustzone": {
+        "CONFIG": "vendor/mediatek/proprietary/trustzone/custom/build/project/${PROJECT}.mk",
+        "OPTIONS": {
+            "MTK_ATF_SUPPORT": "yes",
+            "MTK_TEE_SUPPORT": "yes",
+            "MICROTRUST_TEE_SUPPORT": "yes",
+            "MTK_TEE_DRAM_SIZE": "0x3c00000"
+        }
+    },
+    "kernel-debug": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_debug_defconfig",
+        "OPTIONS": {
+            "CONFIG_MICROTRUST_TEE_SUPPORT": "y",
+            "CONFIG_MICROTRUST_TZ_DRIVER": "y",
+            "CONFIG_MICROTRUST_VFS_DRIVER": "y",
+            "CONFIG_MICROTRUST_FP_DRIVER": "y"
+        }
+    },
+    "kernel": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_defconfig",
+        "OPTIONS": {
+            "CONFIG_MICROTRUST_TEE_SUPPORT": "y",
+            "CONFIG_MICROTRUST_TZ_DRIVER": "y",
+            "CONFIG_MICROTRUST_VFS_DRIVER": "y",
+            "CONFIG_MICROTRUST_FP_DRIVER": "y"
+        }
+    }
+}
+

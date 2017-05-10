@@ -1,0 +1,19 @@
+WHAT IT DOES?
+=============
+custom libSonyIMX230PdafLibrary related files.
+
+
+HOW IT WAS BUILT?
+==================
+It can build the following:
+libSonyIMX230PdafLibrary.so
+
+It needs the following library from MediaTek:
+
+
+HOW TO USE IT?
+==============
+Provide related custom libSonyIMX230PdafLibrary api
+
+All the source code of this library were written by MediaTek co..
+

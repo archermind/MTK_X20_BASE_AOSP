@@ -1,0 +1,20 @@
+WHAT IT DOES?
+=============
+nvram related files.
+
+
+HOW IT WAS BUILT?
+==================
+It can build the following:
+libcamdrv_nvram.a
+
+It needs the following library from MediaTek:
+libaed.a
+
+
+
+HOW TO USE IT?
+==============
+Provide related nvram api
+
+All the source code of this library were written by MediaTek co..

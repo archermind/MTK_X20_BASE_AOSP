@@ -1,0 +1,23 @@
+WHAT IT DOES?
+=============
+LSC table related files.
+
+
+HOW IT WAS BUILT?
+==================
+It can build the following:
+libcam.hal3a.v3.lsctbl.so
+
+It needs the following library from MediaTek:
+
+liblog.so
+libutils.so
+libcutils.so
+libcamalgo.so
+
+
+HOW TO USE IT?
+==============
+Provide related LSC table manipulation api
+
+All the source code of this library were written by MediaTek co..

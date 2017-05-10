@@ -1,0 +1,33 @@
+This directory contains NvRAM libnvram interface, which defines the interface of
+libnvram and is used to build a libnvram shared library.
+
+
+WHAT IT DOES?
+=============
+It provide interface to access NvRAM data which need by modules like WIFI/BT etc.
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following libs from AOSP:
+1.  libc.so
+2.  libcutils.so
+
+and the following libs from MediaTek:
+1.  libcustom_nvram.so
+2.  libnvram.so
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+
+HOW TO USE IT?
+==============
+
+Files in this directory is used to
+generate a shared library 'libnvram_daemon_callback.so'.
+
+The shared library 'libnvram_daemon_callback.so' is called by
+nvram_daemon.so. If nvram user want to access nvram data, it must wait nvram_daemon ready.    
+
+

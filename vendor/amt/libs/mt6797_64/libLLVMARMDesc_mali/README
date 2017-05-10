@@ -1,0 +1,32 @@
+This is used for Mali 3D GPU driver implementation.
+
+WHAT IT DOES?
+=============
+The core 3D driver implementation used to process EGL/GLES commands submmited from
+framework or 3D games.
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  libutils
+2.  libcutils
+3.  libbinder
+4.  libc
+5.  libdl
+6.  libui
+7.  libhardware
+8.  liblog
+9.  libstlport
+10. libsync
+
+and the following libs from MediaTek:
+1.  libmtk_mali_user.a
+2.  libgralloc_extra.so
+3.  libgpu_aux.so
+4.  libdpframework.so
+
+HOW TO USE IT?
+==============
+Android framework EGL/GL wrapper will load the 3D user space driver through egl.cfg.
+EGL/GLES related APIs will pass to the wrapper and go through this user space driver.
+This module is responsible for preparing HW jobs to GPU.

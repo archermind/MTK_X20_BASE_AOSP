@@ -1,0 +1,20 @@
+
+This library is pre-built by MediaTek internally.
+
+
+WHAT IT DOES?
+=============
+GPU Extension Driver (GED) is a common module that contains the debug codes/feature 
+for real GPU driver. GED is composed of user space driver and kernel space driver and 
+provides API services to real GPU driver for use.
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+
+libcutils, liblog, and libutils
+
+HOW TO USE IT?
+==============
+
+Call the exported API for use.

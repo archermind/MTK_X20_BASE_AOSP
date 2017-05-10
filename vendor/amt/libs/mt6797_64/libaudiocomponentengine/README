@@ -1,0 +1,34 @@
+The shared library 'libaudiocomponentengine.so' is the driver of Limter/Shifter/Src/BesLoudness SWIP.
+
+
+WHAT IT DOES?
+=============
+
+The shared library 'libaudiocomponentengine.so' is the driver of Limter/Shifter/Src/BesLoudness SWIP.
+The wraper between Audio HAL and Audio software IP. It is  easy to do post process for Audio HAL.
+
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following library from AOSP:
+1.  libnativehelper.so
+2.  libcutils.so
+3.  libutils.so
+
+and the following libs from MediaTek:
+1.  libaudiocompensationfilter.so
+2.  libnvram.so
+3.  libblisrc32.so
+4.  libbessound_hd_mtk.so
+5.  libmtklimiter.so
+6.  libmtkshifter.so
+
+
+
+HOW TO USE IT?
+==============
+
+Audio HAL will use the related API to process the audio data.
+
+

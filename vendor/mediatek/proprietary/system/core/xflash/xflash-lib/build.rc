@@ -1,0 +1,16 @@
+#define VER_MAJOR       _VER_MAJOR
+#define VER_MINOR       _VER_MINOR
+#define VER_BUILD       _VER_BUILD
+#define VER_PATCH       _VER_PATCH
+#define VERSION_STRING  _VERSION_STRING
+#define COMPANYNAME     "MediaTek Inc."
+#define LEGALCOPYRIGHT  "Copyright (C) 2006 MediaTek Inc. All rights reserved."
+#define LEGALTRADEMARKS "Copyright (C) MediaTek Inc."
+#define FILEDESCRIPTION "BootROM and FlashTool Communication DLL."
+#define FILEVERSION     VERSION_STRING
+#define BUILD_DATE      _BUILD_DATE
+#define BUILD_TIME      _BUILD_TIME
+#define BUILD_STAMP     _BUILD_STAMP
+#define LIBRARY_TYPE    _LIBRARY_TYPE
+#define RELEASE_TYPE    _RELEASE_TYPE
+#define BUILD_INFO      _BUILD_INFO

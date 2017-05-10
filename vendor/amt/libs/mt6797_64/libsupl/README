@@ -1,0 +1,15 @@
+WHAT IT DOES?
+=============
+libhotstill.a,libsupl.a and libmnl.so is the implementation that mediatek navigating technology to work well as three libraries.
+
+HOW IT WAS BUILT?
+==================
+As library files, these are built by arm gcc tool chain.
+
+HOW TO USE IT?
+==============
+The three libraries is linked to system/xbin/mnld daemon,their API will be called when GPS running.
+
+Source
+==============
+All the source code of these libraries were written by MediaTek co..

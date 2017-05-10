@@ -1,0 +1,28 @@
+Library of MTK VP8 sw enc features, icluding encoding yuv to bitstream
+
+This library is pre-built by MediaTek internal.
+
+WHAT IT DOES?
+=============
+libvp8enc_sw.a contains MediaTek developed vp8 sw enc modules.  
+Without them, customer can use android solution
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  liblog.so
+2.  libcutils.so
+
+and the following libs from MediaTek:
+1.  libmtk_drvb.so
+2.  libmet-tag.so
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+HOW TO USE IT?
+==============
+
+all api interface are at (vendor/mediatek/proprietary/hardware/libvcodec/common/software/vp8_enc/)
+
+All the source code of this library were written by MediaTek co..

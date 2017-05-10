@@ -1,0 +1,6 @@
+#!/bin/sh
+current_dir=$(pwd)
+script_dir=$(dirname $0)
+
+$current_dir/$script_dir/astyle --style=kr --indent=spaces=4 --indent-switches --max-code-length=120 --pad-header --pad-oper --convert-tabs --unpad-paren $@
+

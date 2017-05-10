@@ -1,0 +1,28 @@
+The shared library 'libbessound_hd_mtk.so' is a BesLoudness HD implementation.
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+
+BesLoudness HD is the implementation that improve the loudness of 
+the audio signal playback over the mobile phone loudspeaker. It also 
+includes the functionality of audio compensation filter (ACF), 
+headphone compensation filter (HCF).
+
+
+HOW IT WAS BUILT?
+==================
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/proprietary/external/bessound_HD' folder.
+
+
+HOW TO USE IT?
+==============
+
+The shared library 'libbessound_hd_mtk.so' is loaded and invoked by
+audio post-process.
+
+
+All the source code of this library were written by MediaTek co..

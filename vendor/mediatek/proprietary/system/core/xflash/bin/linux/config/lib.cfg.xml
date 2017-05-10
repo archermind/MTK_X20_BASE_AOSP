@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <!--115200, 921600 or other baud rate -->
+  <uart_connection_baudrate>115200</uart_connection_baudrate>
+  <!--log_level: trace=0, debug=1, info=2, warning=3, error=4, fatal=5 -->
+  <log_level>1</log_level>
+
+</config>

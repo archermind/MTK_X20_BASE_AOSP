@@ -1,0 +1,20 @@
+This module serves the common part driver of connectivity
+
+WHAT IT DOES?
+=============
+This module creates four executable binary files for configuring/testing 
+the common part driver.
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+
+libcutils, libc
+
+HOW TO USE IT?
+==============
+The executable binary files will be started in init.rc when boot. they will work together
+with wmt_loader to load/configure the common part driver of connectivity, meanwhile some test
+tool was supplied.
+
+The majority of source code was written by MediaTek. Some code from open source codes are used.

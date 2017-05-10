@@ -1,0 +1,65 @@
+#!/bin/bash
+
+#Check number of parameter
+if [ "$#" != "1" ]; then
+	echo "Usage: $0 objfile"
+	echo "       $0 dirname"
+fi
+
+SIZE=size
+AR=ar
+FILES_LIST=
+FILES=
+ROMSIZE=0
+RAMSIZE=0
+OBJSIZE_DIR=objsize_dir
+
+
+if [ -f "$1" ]; then
+	if [ ${1: -2} == ".o" ]; then
+		echo "find ROM/RAM size of $1"
+		FILES_LIST=$1
+	elif [ ${1: -4} == ".elf" ]; then
+		echo "find ROM/RAM size of $1"
+		FILES_LIST=$1
+	elif [ ${1: -2} == ".a" ]; then
+		echo "find ROM/RAM size of $1"
+		rm -rf $OBJSIZE_DIR
+		mkdir $OBJSIZE_DIR
+		cd $OBJSIZE_DIR
+		$AR x ../$1
+		cd ..
+		FILES_LIST=`find $OBJSIZE_DIR -name "*.o" -print`
+	else
+		echo "Error: $1 is not a .o, .a or elf file"
+		exit
+	fi
+elif [ -d "$1" ]; then
+	FILES_LIST=`find $1 -name "*.o" -print`
+else
+	echo "Error: $1 is an invalid file name or dir name"
+	exit
+fi
+
+
+for OBJFILE in $FILES_LIST
+do
+	#$SIZE $OBJFILE
+	RESULT=`$SIZE --common $OBJFILE | grep -v text`
+	CODESIZE=`echo $RESULT | awk '{printf $1}'`
+	DATASIZE=`echo $RESULT | awk '{printf $2}'`
+	BSSSIZE=`echo $RESULT | awk '{printf $3}'`
+	CODESIZE=`expr $CODESIZE`
+	DATASIZE=`expr $DATASIZE + $BSSSIZE`
+	FILENAME=`basename $OBJFILE`
+	FILES=`echo "$FILES $FILENAME"`
+	echo -e "$FILENAME CODESIZE=$CODESIZE DATASIZE=$DATASIZE"
+	ROMSIZE=`expr $ROMSIZE + $CODESIZE`
+	RAMSIZE=`expr $RAMSIZE + $DATASIZE`
+done
+echo "All Files:$FILES"
+echo "CODESIZE=$ROMSIZE DATASIZE=$RAMSIZE"
+
+if [ ${1: -2} == ".a" ]; then
+	rm -rf $OBJSIZE_DIR
+fi

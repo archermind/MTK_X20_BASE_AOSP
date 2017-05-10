@@ -1,0 +1,30 @@
+The shared library 'libspeech_enh_lib.so' is a BesRecord/MagiASR/VoIP implementation.
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+
+BesRecord, MagiNR and MagiASR are the implementations for improving 
+the speech quality of recording, VoIP and speech recognition.
+BesRecord includes the functionality of speech front-end, dynamic range compression,  
+stereo enhancement and noise reduction.
+MagiNR and MagiASR include the functionality of speech front-end, 
+dynamic range compression,  acoustic echo cancellation and noise reduction (NR).
+
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following libs from MediaTek:
+1.  libmtk_drvb.so
+
+
+HOW TO USE IT?
+==============
+
+The shared library 'libspeech_enh_lib.so' is loaded and invoked by
+audio pre-process.
+
+
+All the source code of this library were written by MediaTek co..

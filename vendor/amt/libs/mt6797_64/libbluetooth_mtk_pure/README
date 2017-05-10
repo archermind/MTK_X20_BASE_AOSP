@@ -1,0 +1,32 @@
+This directory contains Bluetooth driver layer code for test mode (Engineer mode, factory mode, META mode and hardware test tool).
+
+WHAT IT DOES?
+=============
+It provides Bluetooth driver interfaces for test mode usage.
+And provides the Bluetooth relayer function in Engineer mode for certification.
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following libs from AOSP:
+1. libcutils.so
+
+and the following libs from MediaTek:
+1. liblog.so
+2. libnvram.so
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+
+HOW TO USE IT?
+==============
+
+Files in this directory is used to
+1. Generate a library named 'libbluetooth_mtk_pure.so', which provides Bluetooth driver interfaces for test mode usage.
+2. Generate a library named 'libbluetoothem_mtk.so', which provides the directly operating interfaces to Engineer mode.
+3. Generate a library named 'libbluetooth_relayer.so', which provides the Bluetooth relayer function in Engineer mode.
+
+
+All the source code of this library were written by MediaTek co..
+

@@ -1,0 +1,31 @@
+This directory contains NvRAM libnvram interface, which defines the interface of
+libnvram and is used to build a libnvram shared library.
+
+
+WHAT IT DOES?
+=============
+It provide interface to access NvRAM data which need by modules like WIFI/BT etc.
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following libs from AOSP:
+1.  libc.so
+2.  libcutils.so
+
+and the following libs from MediaTek:
+N/A
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+
+HOW TO USE IT?
+==============
+
+Files in this directory is used to
+generate a shared library 'libcustom_nvram.so'.
+
+The shared library 'libcustom_nvram.so' store common LID table, backup list and some convert function those are used in LID table.    
+
+

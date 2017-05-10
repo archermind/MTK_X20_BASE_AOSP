@@ -1,0 +1,16 @@
+WHAT IT DOES?
+=============
+mnld is the implementation that mediatek navigating technology to work well as mediatek navigating library process on native.
+
+HOW IT WAS BUILT?
+==================
+As native process, these are built by android build system.
+
+HOW TO USE IT?
+==============
+mnld is run when system boot up,they receive command from GPS HAL/AGPSD,handle with gps start/close/init/cleanpu opertions,
+and send responises to GPS HAL/AGPSD.
+
+Source
+==============
+All the source code of these libraries were written by MediaTek co..

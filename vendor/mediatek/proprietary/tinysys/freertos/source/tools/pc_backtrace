@@ -1,0 +1,71 @@
+#!/bin/bash
+PROG=$(basename ${0})
+current_dir=$(pwd)
+script_dir=$(dirname $0)
+project=${TARGET_PRODUCT}
+project=${TARGET_PRODUCT/full_/}
+if [ -z "$TARGET_PRODUCT" ]; then
+   project=evb6797_64
+fi
+cpu=CM4_A
+addr2line=$current_dir/$script_dir/../../../../../../../prebuilts/gcc/linux-x86/arm/gcc-arm-none-eabi-4_8-2014q3/bin/arm-none-eabi-addr2line
+default_elf=$current_dir/$script_dir/../../../../../../../out/target/product/$project/obj/TINYSYS_OBJ/tinysys-scp_intermediates/freertos/source/$cpu/tinysys-scp-$cpu.elf
+
+usage() {
+    cat >&2 <<- EOF
+USAGE
+  ${PROG} [-h] [elf file] [PC address]
+
+EXAMPLES
+	1)To parse multiple PC addresses via default elf($project).
+	#$PROG
+	<paste the PC address>
+
+	2)To parse multiple PC addresses via specific elf.
+	#$PROG tinysys-scp-CM4_A.elf
+	<paste the PC address>
+
+	3)To parse specific PC address via default elf($project).
+	#$PROG 0x00007670
+
+	4)To parse specific PC address via specific elf.
+	#$PROG tinysys-scp-CM4_A.elf 0x00007670
+
+EOF
+
+exit 1
+}
+while getopts ':h' arg; do
+    case "${arg}" in
+    'h' ) usage ;;
+    ? ) usage ;;
+    esac
+done
+
+if [ $# -eq 2 ]; then
+	if [ ${1: -4} == ".elf" ]; then
+		elf_file=$1
+		$addr2line -e $elf_file $2
+	else
+		usage
+	fi
+fi
+if [ $# -eq 1 ]; then
+	if [ ${1: -4} == ".elf" ]; then
+		elf_file=$1
+		echo "Current elf:${elf_file}"
+		echo "Please paste the PC address list. type CTRL+C to exit $PROG."
+		while IFS= read -r address || [[ -n "$address" ]]; do
+			$addr2line -e $elf_file $address
+		done
+	else
+		$addr2line -e $default_elf $1
+	fi
+fi
+if [ $# -eq 0 ]; then
+	echo "Current project:${project}"
+	echo "Please paste the PC address list. type CTRL+C to exit $PROG."
+	while IFS= read -r address || [[ -n "$address" ]]; do
+		$addr2line -e $default_elf $address
+	done
+fi

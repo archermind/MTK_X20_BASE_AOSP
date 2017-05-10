@@ -1,0 +1,32 @@
+The shared library 'libcvsd_mtk.so' is a CVSD codec with PLC implementation.
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+
+CVSD codec with PLC is the implementation that encode audio PCM data to CVSD 
+bitstream or decode CVSD bitstream to audio PCM data with packet loss 
+concealment (PLC) algorithm.
+
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following libs from AOSP:
+1.  libnativehelper.so
+2.  libcutils.so
+3.  libutils.so
+
+and the following libs from MediaTek:
+1.  libmtk_drvb.so
+
+
+HOW TO USE IT?
+==============
+
+The shared library 'libcvsd_mtk.so' is loaded and invoked by
+audio codec.
+
+
+All the source code of this library were written by MediaTek co..

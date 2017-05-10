@@ -1,0 +1,26 @@
+The shared library 'libmtklimiter.so' is an audio limiter implementation.
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+
+Audio limiter is the implementation that transform the audio content PCM
+format from 64-bit data (Q33.31 format) to 32-bit data (Q1.31 format).
+
+
+HOW IT WAS BUILT?
+==================
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/proprietary/external/limiter' folder.
+
+
+HOW TO USE IT?
+==============
+
+The shared library 'libmtklimiter.so' is loaded and invoked by
+audio post-process.
+
+
+All the source code of this library were written by MediaTek co..

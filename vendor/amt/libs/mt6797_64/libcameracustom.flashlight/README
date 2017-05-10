@@ -1,0 +1,21 @@
+Library of MTK camera tuning
+
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+For providing camera-flash tuning function and options.
+
+HOW IT WAS BUILT?
+==================
+build static lib libcameracustom.flashlight.a and be added to libcameracustom.so
+
+
+HOW TO USE IT?
+==============
+
+Camera call functions to get camera-flash tuning parameters.
+
+All the source code of this library were written by MediaTek co..
+

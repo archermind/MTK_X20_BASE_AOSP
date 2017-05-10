@@ -1,0 +1,17 @@
+MTK Library of image sensor tuning
+
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+For providing camera-3a related tuning function and options(parameters).
+
+
+HOW TO USE IT?
+==============
+
+Camera call functions to get camera-3a realted tuning parameters.
+
+All the source code of this library were written by MediaTek co..
+

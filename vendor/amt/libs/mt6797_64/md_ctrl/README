@@ -1,0 +1,19 @@
+This module is used to stop/start the modem
+
+
+WHAT IT DOES?
+=============
+md_ctrl is used to stop/start the modem
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+
+libc liblogwrap liblog libcutils
+
+HOW TO USE IT?
+==============
+Run md_ctrl as a daemon/service. For example, create a service in init*.rc on
+an Android platform.
+
+The majority of source code were written by MediaTek.

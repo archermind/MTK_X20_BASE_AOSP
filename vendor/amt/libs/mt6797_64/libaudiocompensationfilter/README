@@ -1,0 +1,30 @@
+The shared library 'libaudiocompensationfilter.so' read/write datas of ACF/HCF from/into NvRAM
+
+
+WHAT IT DOES?
+=============
+
+Audiocompensationfilter the implementation that get datas and set datas of audio compensation filter (ACF), 
+headphone compensation filter (HCF) from NvRAM.
+
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following library from AOSP:
+1.  libnativehelper.so
+2.  libcutils.so
+3.  libutils.so
+
+and the following libs from MediaTek:
+1.  libcustom_nvram.so
+2.  libnvram.so
+
+
+
+HOW TO USE IT?
+==============
+
+Audio HAL will use the related API to set/get parameters of ACF/HCF
+
+

@@ -1,0 +1,18 @@
+This module serves the common part driver of spm
+
+WHAT IT DOES?
+=============
+This module creates one executable binary files for loading/initializing the firmwares including
+spm if needed.
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+
+
+HOW TO USE IT?
+==============
+the executable binary files, spm_loader, will be started in init.rc when boot. it will load/initialize
+to load the firmwares of spm
+
+The source code was written by MediaTek.

@@ -1,0 +1,24 @@
+Library of MediaTek hardware H.264 video decoder.
+
+This library is pre-built by MediaTek internal.
+
+WHAT IT DOES?
+=============
+This library provide the decode core of hardware H.264 video decoder of MediaTek.
+
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  libc.so
+2.  libcutils.so
+
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+HOW TO USE IT?
+==============
+provide the private interface for MediaTek video common driver.
+
+All the source code of this library were written by MediaTek co..

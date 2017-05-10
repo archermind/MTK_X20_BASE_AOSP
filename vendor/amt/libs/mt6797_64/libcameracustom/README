@@ -1,0 +1,16 @@
+
+WHAT IT DOES?
+=============
+camera related hal files for customize
+
+
+HOW IT WAS BUILT?
+==================
+It can build the following shared library:
+libcameracustom.so
+
+
+HOW TO USE IT?
+==============
+Provide api for camera customize hal.
+

@@ -1,0 +1,51 @@
+This directory contains HWComposer HAL interface, which defines the interface of
+HWComposer and is used to build a hwcomposer shared library.
+
+
+WHAT IT DOES?
+=============
+
+HWComposer is the implementation that leverages HW IPs to
+share the workload of GPU, which reduces the power consumption and
+accelerates the rendering performance.
+
+It defines the interface of HWComposer v1.4 and is used to
+build the hwcomposer shared library.
+
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following libs from AOSP:
+1.  libEGL.so
+2.  libGLESv1_CM.so
+3.  libui.so
+4.  libutils.so
+5.  libcutils.so
+6.  libsync.so
+7.  libion.so
+8.  libhardware.so
+
+and the following libs from MediaTek:
+1.  libm4u.so
+2.  libion_mtk.so
+3.  libdpframework.so
+4.  libgralloc_extra.so
+5.  hwcomposer.$(CHIP_NAME).1.4.a
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+
+HOW TO USE IT?
+==============
+
+Files in this directory is used to
+generate a shared library 'hwcomposer.$(CHIP_NAME).so'.
+
+The shared library 'hwcomposer.mt6582.so' is loaded and invoked by
+SurfaceFlinger at runtime and behaves as a hardware compositor that
+shrares the workload with SurfaceFlinger for layer comsopition.
+
+
+All the source code of this library were written by MediaTek co..

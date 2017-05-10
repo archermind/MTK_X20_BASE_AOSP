@@ -1,0 +1,25 @@
+Library of MTK bandwidth control module (BWC)
+
+
+WHAT IT DOES?
+=============
+libbwc.so optimizes the bus access latency in multimedia scenarios to meet realtime 
+requirement. BWC is required for all MTK multimedia middleware implementation including
+camera and video middlewares.
+
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  liblog.so
+2.  libcutils.so
+
+
+
+HOW TO USE IT?
+==============
+
+Provide function-based interface for MTK multimedia middlewares
+The interface is defined in bwc common headers. (vendor/mediatek/proprietary/hardware/bwc)
+
+All the source code of this library were written by MediaTek co..

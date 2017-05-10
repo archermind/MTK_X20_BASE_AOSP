@@ -1,0 +1,13 @@
+WHAT IT DOES?
+=============
+The core extension implementation used to GPU plogin.
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  libgralloc_extra
+2.  libdpframework
+
+HOW TO USE IT?
+==============
+This module is responsible for preparing extension jobs to GPU.

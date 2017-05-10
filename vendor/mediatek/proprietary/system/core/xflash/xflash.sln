@@ -1,0 +1,26 @@
+
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xflash-lib", "xflash-lib\xflash-lib.vcproj", "{85B270D8-9716-455D-8406-703CD7421FE3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xflash-console", "xflash-cmd-line\xmain-console.vcproj", "{E4C6B329-032F-4BD0-B11B-F41FE70A8F1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85B270D8-9716-455D-8406-703CD7421FE3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{85B270D8-9716-455D-8406-703CD7421FE3}.Debug|Win32.Build.0 = Debug|Win32
+		{85B270D8-9716-455D-8406-703CD7421FE3}.Release|Win32.ActiveCfg = Release|Win32
+		{85B270D8-9716-455D-8406-703CD7421FE3}.Release|Win32.Build.0 = Release|Win32
+		{E4C6B329-032F-4BD0-B11B-F41FE70A8F1A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E4C6B329-032F-4BD0-B11B-F41FE70A8F1A}.Debug|Win32.Build.0 = Debug|Win32
+		{E4C6B329-032F-4BD0-B11B-F41FE70A8F1A}.Release|Win32.ActiveCfg = Release|Win32
+		{E4C6B329-032F-4BD0-B11B-F41FE70A8F1A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,22 @@
+The bin file 'ccci_fsd' is a daemon service.
+This bin is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+
+ccci_fsd is based on linux fs and used to store modem data into AP flash, 
+it is called by modem RPC via ccci channel.
+
+
+HOW IT WAS BUILT?
+==================
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+
+HOW TO USE IT?
+==============
+
+The bin file is a system service, and it's started at system booting up while parsing init.modem.rc.

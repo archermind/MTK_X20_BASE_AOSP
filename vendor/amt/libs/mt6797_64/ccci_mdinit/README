@@ -1,0 +1,21 @@
+The bin file 'ccci_mdinit' is a daemon service.
+This bin is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+
+ccci_mdinit comunicates with ccci drvier to control modem life-cycle and state, such as  when to start and stop modem, 
+how to handle flight mode, how to modem exception, and etc.
+
+HOW IT WAS BUILT?
+==================
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+
+HOW TO USE IT?
+==============
+
+The bin file is a system service, and it's started at system booting up while parsing init.modem.rc.

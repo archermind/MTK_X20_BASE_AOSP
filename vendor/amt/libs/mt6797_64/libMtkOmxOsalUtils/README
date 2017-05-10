@@ -1,0 +1,9 @@
+MTK OpenMAX IL OS Abstraction Layer
+
+WHAT IT DOES?
+=============
+Provide OS abstraction API layer
+
+HOW TO USE IT?
+==============
+Used by OpenMAX IL CORE/Components

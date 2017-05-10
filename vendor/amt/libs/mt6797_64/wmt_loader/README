@@ -1,0 +1,19 @@
+This module serves the common part driver of connectivity
+
+WHAT IT DOES?
+=============
+This module creates one executable binary files for loading/initializing the common part driver including 
+wifi, fm, gps and BT if needed.
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+
+libcutils
+
+HOW TO USE IT?
+==============
+the executable binary files, wmt_loader, will be started in init.rc when boot. it will load/initialize
+to load the common part drivers(common part/wifi/fm/gps/BT) of connectivity
+
+The source code was written by MediaTek.

@@ -1,0 +1,28 @@
+This module creates the audio parameter parser shared library file.
+
+
+WHAT IT DOES?
+=============
+
+The audio parameter parser library is used to parse the xml files which contain the audio parameters,
+User could get/set these parameters through the audio parameter parser APIs.
+
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following library from AOSP:
+1.  libicuuc
+2.  libutils
+3.  libcutils
+4.  libbinder
+5.  libmedia
+
+
+
+HOW TO USE IT?
+==============
+
+Link the audio parameter library and using it's APIs to retrieve audio parameters you want.
+
+

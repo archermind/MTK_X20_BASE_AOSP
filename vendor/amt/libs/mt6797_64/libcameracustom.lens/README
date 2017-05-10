@@ -1,0 +1,17 @@
+WHAT IT DOES?
+=============
+The mediatek\proprietary\custom\mt6797\hal\lens
+is intended for AF lens tuning parameters and defined lens driver list
+The lens driver list is used in HAL (af_mgr).
+
+The code placed under this directory is platform dependent
+
+HOW IT WAS BUILT?
+==================
+
+HOW TO USE IT?
+==============
+Lens tuning parameter is for AF algorithm. 
+
+All the source code of this library were written by MediaTek co..
+

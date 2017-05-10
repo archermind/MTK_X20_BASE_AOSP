@@ -1,0 +1,37 @@
+This directory contains NvRAM daemon binary
+
+
+WHAT IT DOES?
+=============
+It provide restore NvRAM data from backup partition to file system when filesystem is empty
+And it provide callback for specific request of NvRAM modules, like do some data convert things.
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following libs from AOSP:
+1.  libc.so
+2.  libcutils.so
+
+and the following libs from MediaTek:
+1. libnvram.so
+2. libcustom_nvram.so
+3. libfile_op
+4. libnvram_daemon_callback
+
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+
+HOW TO USE IT?
+==============
+
+Files in this directory is used to
+generate a binary which's name is 'nvram_daemon'
+
+The binary  'nvram_daemon'' is loaded when system boot up,
+it would do NvRAM data restore tings when file system is empty.
+
+
+All the source code of this library were written by MediaTek co..

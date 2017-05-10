@@ -1,0 +1,42 @@
+This directory contains mSBC (modified SBC) interface,
+ which defines the interface of mSBC and is used to build a shared library.
+
+
+WHAT IT DOES?
+=============
+
+mSBC is modified SBC, which is used as BT wide-band codec.
+
+For encoder, the input is PCM, and output is mSBC bitstream.
+For decoder, the input is mSBC bitstream, and output is PCM.
+
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following libs from AOSP:
+1.  libnativehelper.so
+2.  libcutils.so
+3.  libutils.so
+
+and the following libs from MediaTek:
+1.  libmtk_drvb.so
+
+Source code:
+1.  sbc_synth.c
+2.  sbc_enc.c
+3.  sbc_dec.c
+4.  sbc_common.c
+5.  sbc_anal.c
+6.  msbc_wrapper.c
+
+HOW TO USE IT?
+==============
+
+It is a shared library 'libmsbc_mtk.so'.
+
+The shared library 'libmsbc_mtk.so' is loaded and invoked by
+Audio HAL at runtime and behaves as a BT codec.
+
+
+All the source code of this library were written by MediaTek co..

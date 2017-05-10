@@ -1,0 +1,33 @@
+Library of MTK camera 3A/ISP algorithm files (confidential), icluding 
+Auto exposure, auto focus, auto white balance, image signal processing
+
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+lib3a contains MediaTek developed camera 3A/ISP algorithms  
+Without them, camera functionalities will not work¡¨
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  liblog.so
+2.  libcutils.so
+3.  libstlport.so 
+
+and the following libs from MediaTek:
+none
+please refer to Android.mk, LOCAL_SHARED_LIBRARIES
+
+note that it's a SHARED_LIBRARY
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+HOW TO USE IT?
+==============
+
+Provide function definitions (algorithms) for camera 3A/ISP managers to control the camera 3A and ISP tuning.
+
+All the source code of this library were written by MediaTek co..

@@ -1,0 +1,9 @@
+MTK OpenMAX IL CORE implementation
+
+WHAT IT DOES?
+=============
+Provide OMX IL CORE interface to client apps
+
+HOW TO USE IT?
+==============
+Used by OpenMAX IL plug-in

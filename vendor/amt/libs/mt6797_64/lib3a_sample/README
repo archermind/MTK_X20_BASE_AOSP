@@ -1,0 +1,17 @@
+MTK Library of image sensor tuning
+
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+open source 3a algorithm lib.
+
+
+HOW TO USE IT?
+==============
+
+This is example of 3a lib. It is guide to develope customer's 3a algorithm lib.
+
+All the source code of this library were written by MediaTek co..
+

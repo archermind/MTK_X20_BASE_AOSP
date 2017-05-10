@@ -1,0 +1,17 @@
+This process controll modem by trigger CCCI ioctl
+
+This library is pre-built by MediaTek internally.
+
+
+WHAT IT DOES?
+=============
+This process trigger CCCI ioctl to stop/start/reset modem
+
+HOW IT WAS BUILT?
+==================
+It is built to executable binary
+
+HOW TO USE IT?
+==============
+Using adb shell command to set ril.mux.report.case system
+property value and execute muxreport process

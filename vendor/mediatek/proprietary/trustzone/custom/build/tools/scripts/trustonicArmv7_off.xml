@@ -1,0 +1,25 @@
+<TeeConfig>
+  <ProjectConfig>
+    <config feature="MTK_TEE_SUPPORT" value="no" />
+    <config feature="TRUSTONIC_TEE_SUPPORT" value="no" />
+    <config feature="MTK_ATF_SUPPORT" value="no" />
+  </ProjectConfig>
+  <TrustzoneConfig>
+    <config feature="MTK_TEE_SUPPORT" value="no" />
+    <config feature="TRUSTONIC_TEE_SUPPORT" value="no" />
+    <config feature="MTK_ATF_SUPPORT" value="no" />
+  </TrustzoneConfig>
+  <LKConfig>
+    <config feature="TRUSTONIC_TEE_SUPPORT" value="no" />
+  </LKConfig>
+  <PreloadConfig>
+    <config feature="CFG_TEE_SUPPORT" value="0" />
+    <config feature="CFG_TRUSTONIC_TEE_SUPPORT" value="0" />
+  </PreloadConfig>
+  <KernelConfig>
+    <config feature="CONFIG_TRUSTONIC_TEE_SUPPORT" value="is not set" />
+  </KernelConfig>
+  <KernelDebugConfig>
+    <config feature="CONFIG_TRUSTONIC_TEE_SUPPORT" value="is not set" />
+  </KernelDebugConfig>
+</TeeConfig>

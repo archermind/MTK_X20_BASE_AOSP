@@ -1,0 +1,31 @@
+Library of MTK camera Face Detection/Smile Detection.
+
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+This contains MediaTek developed camera detection feature module.  
+Without them, camera detection feature will not work”
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  liblog.so
+2.  libcutils.so
+
+and the following libs from MediaTek:
+1.  libcameracustom.so
+2.  libdpframework.so
+3.  libcamalgo.so
+
+It can build the following static library file :
+libfeature.face
+
+HOW TO USE IT?
+==============
+
+Provide api for camera HAL to control camera detection feature.
+all api interface are at (vendor/mediatek/proprietary/hardware/mtkcam)
+
+All the source code of this library were written by MediaTek co..

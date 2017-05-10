@@ -1,0 +1,26 @@
+This directory contains ccci lib util api, which defines the interface of
+ccci lib and is used to build a libccci_util shared library.
+
+
+WHAT IT DOES?
+=============
+It provide api to query kernal configure and project configure setting which need by modules like ccci_mdinit etc.
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following libs from AOSP:
+1.  libc.so
+2.  libcutils.so
+3.  liblog.so
+
+HOW TO USE IT?
+==============
+
+Files in this directory is used to
+generate a shared library 'libccci_util.so'.
+
+The shared library 'libccci_util' is called by
+ccci user which like ccci_mdinit modules to get current modem configure setting.   I 
+
+

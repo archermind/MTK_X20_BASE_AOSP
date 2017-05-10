@@ -1,0 +1,19 @@
+Library of MTK OpenMAX IL Component for video encoding.
+
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+libMtkOmxVenc.so can encode video in many video codecs by MTK solution.
+
+HOW IT WAS BUILT?
+==================
+It needs many libraries from AOSP and MTK.
+e.g. libutils, libbinder, libdl, libcutils...
+
+HOW TO USE IT?
+==============
+It follows the OpenMAX IL spec.
+We suggest that use MediaCodec instead of using it directly.
+

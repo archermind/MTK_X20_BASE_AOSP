@@ -1,0 +1,29 @@
+Library of MTK mpeg2 codec driver.
+
+This library is pre-built by MediaTek internal.
+
+
+WHAT IT DOES?
+=============
+libmpeg2dec_hw contains MediaTek developed mpeg2 hardware video decoder related functions.
+Without them, mpeg2 video playback will not work¡¨
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1. llibcutils libc.so
+
+
+and the following libs from MediaTek:
+NA
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+HOW TO USE IT?
+==============
+
+Provide mpeg2 decoder api invoked by common decoder interface,
+those api are all internal-used and are invisible to customer.
+
+All the source code of this library were written by MediaTek co..

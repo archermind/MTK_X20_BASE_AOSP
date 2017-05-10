@@ -1,0 +1,29 @@
+The shared library 'libaudiocustparam.so' implements the APIs to read/write data via NvRAM
+
+
+WHAT IT DOES?
+=============
+
+Audiocustparam is a module that offers APIs to read/write different NvRAM data.
+
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following library from AOSP:
+1.  libcutils.so
+2.  libutils.so
+
+
+and the following libs from MediaTek:
+1.  libnvram.so
+2.  libcustom_nvram.so
+
+
+
+HOW TO USE IT?
+==============
+
+The releated APIs of audiocustparam are used in audio HAL.
+
+

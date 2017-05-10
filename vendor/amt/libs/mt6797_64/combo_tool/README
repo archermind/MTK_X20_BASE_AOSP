@@ -1,0 +1,22 @@
+This module serves the common part driver of connectivity
+
+WHAT IT DOES?
+=============
+This module creates some executable binary files for loading/configuring/testing 
+the common part driver, in addition, it installs the Firmware patch and common part 
+cfg files into device.
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+
+libcutils, libc
+
+HOW TO USE IT?
+==============
+The firmware patch and common part cfg file was installed into device directly when build.
+And the executable binary files will be started in init.rc when boot. they will work together
+to load/configure the common part driver of connectivity
+
+The majority of source code was written by MediaTek. Some code from open source codes are used.
+more detail info, pls ref the NOTICE under the specific sub folder.

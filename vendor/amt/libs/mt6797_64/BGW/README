@@ -1,0 +1,15 @@
+WHAT IT DOES?
+=============
+BGW is the implementation for RF emissions.
+
+HOW IT WAS BUILT?
+==================
+As native process, these are built by android build system.
+
+HOW TO USE IT?
+==============
+BGW is run when system boot up.
+
+Source
+==============
+All the source code of these libraries were written by MediaTek co..

@@ -1,0 +1,21 @@
+WHAT IT DOES?
+=============
+The library implementation used to process gralloc.
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  libhardware 
+2.  liblog 
+3.  libcutils 
+4.  libGLESv1_CM
+5.  libutils
+6.  libgralloc_extra
+7.  libion_mtk
+8.  libdl
+
+
+
+HOW TO USE IT?
+==============
+This module is responsible for preparing gralloc jobs to GPU.

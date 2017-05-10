@@ -1,0 +1,27 @@
+This directory contains WIFI firmware library
+
+
+WHAT IT DOES?
+=============
+It provide WIFI firmware for WIFI driver usage.
+
+
+HOW IT WAS BUILT?
+==================
+It needs the following libs from AOSP:
+
+
+and the following libs from MediaTek:
+
+
+All source/dependency modules of this module are already put in
+'' folder.
+
+
+HOW TO USE IT?
+==============
+Files in this directory is used to for firmware
+
+
+All the source code of this library were written by MediaTek co..
+

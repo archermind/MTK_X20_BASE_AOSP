@@ -1,0 +1,43 @@
+The share library "libGLES_mali.so" is the core Mali 3D GPU driver implementation.
+(OpenGL ES 1.x/OpenGL ES 2.0/OpenGL ES 3.0/OpenCL 1.0/OpenCL 1.2)
+
+It is mainly responsible for 3D graphics(EGL/GLES1.x/GLES2.0/GLES3.0) rendering
+and General Purpose computing on GPU.
+This library is pre-built by MediaTek internally.
+
+WHAT IT DOES?
+==================
+libGLES_mali.so:
+The core 3D driver implementation used to process EGL/GLES commands submmited from
+framework or 3D games.
+
+The 3D HW jobs will be prepared and submit to kernel driver for further handling.
+
+HOW IT WAS BUILT?
+==================
+It needs the following library from AOSP:
+1.  libutils
+2.  libcutils
+3.  libbinder
+4.  libc
+5.  libdl
+6.  libui
+7.  libhardware
+8.  liblog
+9.  libstlport
+10. libsync
+
+and the following libs from MediaTek:
+1.  libmtk_mali_user.a
+2.  libgralloc_extra.so
+3.  libgpu_aux.so
+4.  libdpframework.so
+
+All source/dependency modules of this module are already put in
+'vendor/mediatek/libs' folder.
+
+HOW TO USE IT?
+==================
+Android framework EGL/GL wrapper will load the 3D user space driver through egl.cfg.
+EGL/GLES related APIs will pass to the wrapper and go through this user space driver.
+This module is responsible for preparing HW jobs to GPU.
